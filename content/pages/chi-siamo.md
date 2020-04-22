@@ -1,4 +1,5 @@
 ---
-title: Chi Siamo
+title: About
+layout: Layout
 ---
 Siamo noi
