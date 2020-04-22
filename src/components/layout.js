@@ -35,9 +35,11 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()} Lazzerini Rappresentanze
+          <br />
+          Designed and built by{" "}
+          <a href="https://beatricecox.com">Beatrice Cox</a>
+          and <a href="https://dcrestini.me">Davide Crestini</a>
         </footer>
       </div>
     </>
