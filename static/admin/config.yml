@@ -20,7 +20,7 @@ collections:
       - { label: "Logo", name: "logo", widget: "string" }
   
   - name: 'pages'
-    label: 'Pages'
+    label: 'Pagine'
     editor:
       preview: false
     files:
@@ -28,6 +28,6 @@ collections:
         name: 'chiSiamo'
         file: 'content/pages/chi-siamo.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', default: 'Chi Siamo' }
-          - { label: 'Layout', name: 'title', widget: 'string', default: 'Chi Siamo' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Titolo', name: 'title', widget: 'string', default: 'Chi Siamo' }
+          - { label: 'Layout', name: 'layout', widget: 'string', default: 'Chi Siamo' }
+          - { label: 'Contenuto', name: 'body', widget: 'markdown' }
