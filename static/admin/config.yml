@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: master
 
+locale: 'it'
 media_folder: static/img
 public_folder: /img
 
@@ -17,3 +18,16 @@ collections:
       - { label: "Nome", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Logo", name: "logo", widget: "string" }
+  
+  - name: 'pages'
+    label: 'Pages'
+    editor:
+      preview: false
+    files:
+      - label: 'Chi Siamo'
+        name: 'chiSiamo'
+        file: 'chi-siamo.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'Chi Siamo' }
+          - { label: 'Layout', name: 'title', widget: 'hidden', default: 'Chi Siamo' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
