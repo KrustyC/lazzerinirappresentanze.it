@@ -7,10 +7,19 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
+
+const MainWrapper = styled.div`
+  min-height: 67vh;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1.0875rem 1.45rem;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,22 +35,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+
+      <MainWrapper>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()} Lazzerini Rappresentanze
-          <br />
-          Designed and built by{" "}
-          <a href="https://beatricecox.com">Beatrice Cox</a>
-          and <a href="https://dcrestini.me">Davide Crestini</a>
-        </footer>
-      </div>
+      </MainWrapper>
+
+      <Footer />
     </>
   )
 }
