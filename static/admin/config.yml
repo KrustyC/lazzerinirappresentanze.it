@@ -2,11 +2,89 @@ backend:
   name: git-gateway
   branch: master
 
-locale: 'it'
+locale: "it"
 media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "pages"
+    label: "Pagine"
+    editor:
+      preview: false
+    files:
+      - label: "Home"
+        name: "home"
+        file: "content/pages/home.md"
+        fields:
+          - {
+              label: "Titolo",
+              name: "title",
+              widget: "string",
+              default: "Chi Siamo",
+            }
+          - {
+              label: "Slogan",
+              name: "slogan",
+              widget: "string",
+              default: "Lazzerini Rappresentanze",
+            }
+          - { label: "Contenuto paragrafo", name: "body", widget: "markdown" }
+
+      - label: "Azienda"
+        name: "about"
+        file: "content/pages/about.md"
+        fields:
+          - {
+              label: "Titolo",
+              name: "title",
+              widget: "string",
+              default: "Azienda",
+            }
+          - {
+              label: "Layout",
+              name: "layout",
+              widget: "string",
+              default: "Di default",
+            }
+          - {
+              label: "Contenuto",
+              name: "body",
+              widget: "markdown",
+              default:
+                "Siamo un’agenzia di rappresentanza con l’obbiettivo di collegare le aziende rappresentate nei canali della
+                DO/GDO e INGROSSO FOOD&amp;BEVERAGE attraverso servizi che riteniamo essere fondamentali per garantire
+                a tutta la filiera commerciale un ottimo risultato sia a volume che a valore.",
+            }
+
+      - label: "Servizi"
+        name: "services"
+        file: "content/pages/services.md"
+        fields:
+          - {
+              label: "Titolo",
+              name: "title",
+              widget: "string",
+              default: "I nostri servizi",
+            }
+          - { label: "Cosa Facciamo", name: "body", widget: "markdown" }
+
+      - label: "Contatti"
+        name: "contacts"
+        file: "content/pages/contacts.md"
+        fields:
+          - {
+              label: "Title",
+              name: "title",
+              widget: "string",
+              default: "Contattaci",
+            }
+          - {
+              label: "Indirizzo",
+              name: "address",
+              widget: "string",
+              default: "Via Dante, 20",
+            }
+
   - name: "partners"
     label: "Partners"
     folder: "content/partners"
@@ -18,16 +96,3 @@ collections:
       - { label: "Nome", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Logo", name: "logo", widget: "string" }
-  
-  - name: 'pages'
-    label: 'Pagine'
-    editor:
-      preview: false
-    files:
-      - label: 'Chi Siamo'
-        name: 'chiSiamo'
-        file: 'content/pages/chi-siamo.md'
-        fields:
-          - { label: 'Titolo', name: 'title', widget: 'string', default: 'Chi Siamo' }
-          - { label: 'Layout', name: 'layout', widget: 'string', default: 'Chi Siamo' }
-          - { label: 'Contenuto', name: 'body', widget: 'markdown' }
