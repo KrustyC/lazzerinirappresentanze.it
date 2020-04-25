@@ -4,11 +4,11 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Partner = ({ data }) => {
+const Services = ({ data }) => {
   const { title } = data.markdownRemark.frontmatter
   return (
     <Layout>
-      <SEO title="Chi Siamo" />
+      <SEO title="I nostri servizi" />
       <h1>{title}</h1>
       <p>Welcome to page 2</p>
       <Link to="/">Go back to the homepage</Link>
@@ -17,8 +17,8 @@ const Partner = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query GetAbout {
-    markdownRemark(fileAbsolutePath: { regex: "/about/" }) {
+  query GetServices {
+    markdownRemark(fileAbsolutePath: { regex: "/services/" }) {
       frontmatter {
         title
       }
@@ -26,4 +26,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default Partner
+export default Services
