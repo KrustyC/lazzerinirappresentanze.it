@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Lazzerini Rappresentanze`,
@@ -9,6 +13,18 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+        head: false,
+        anonymize: true,
+        // Defers execution of google analytics script after page load
+        defer: false,
+        cookieDomain: process.env.COOKIE_DOMAIN,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
