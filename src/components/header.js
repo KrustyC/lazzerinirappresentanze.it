@@ -43,7 +43,7 @@ const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <InnerHeader>
       {links.map(({ text, link }) => (
-        <StyledLink to={link}>{text}</StyledLink>
+        <StyledLink key={text} to={link}>{text}</StyledLink>
       ))}
     </InnerHeader>
   </HeaderWrapper>

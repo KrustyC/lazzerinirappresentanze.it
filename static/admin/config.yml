@@ -96,3 +96,4 @@ collections:
       - { label: "Nome", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Logo", name: "logo", widget: "string" }
+      - { label: "Immagine", name: "image", widget: "image"}
