@@ -29,11 +29,12 @@ function useCookie(cookieName, path) {
   }, [cookieName])
 
   useEffect(() => {
+    console.log('here', isMounted)
     if (isMounted) {
       localStorage.setItem(cookieName, true)
       setShowCookieBanner(false)
     }
-  }, [path, cookieName, isMounted])
+  }, [path, cookieName])
 
   return [showCookieBanner, allowCookie, forbidCookie]
 }

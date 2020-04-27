@@ -6,8 +6,12 @@ const CookieContainer = styled.div`
   position: absolute;
   width: 80vw;
   height: 200px;
-  background: red;
+  background: mediumaquamarine;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   bottom: 20px;
   position: absolute;
@@ -16,12 +20,26 @@ const CookieContainer = styled.div`
   right: 0;
 `
 
+const Button = styled.button`
+  padding: 10px 15px;
+  background: ${({ primary }) => (primary ? "mediumaquamarine" : "gray")};
+`
+
 const CookieBanner = ({ onAllowCookie, onForbidCookie }) => (
   <Portal id="portal">
     <CookieContainer>
-      Questo e' un Bannerr!!!
-      <button onClick={onAllowCookie}>Consento</button>
-      <button onClick={onForbidCookie}>Non Consento</button>
+      <p>
+        Il nostro sito utilizza cookie di prime parti e cookie analytics per
+        ottimizzare il sito. Cliccando "OK" o proseguendo la navigazione,
+        accetti l'uso dei cookie. Per maggiori informazioni e disattivazione
+        consulta l'informativa cookie completa.
+      </p>
+      <div>
+        <Button primary onClick={onAllowCookie}>
+          Accetta
+        </Button>
+        <Button onClick={onForbidCookie}>Rifiuta</Button>
+      </div>
     </CookieContainer>
   </Portal>
 )
