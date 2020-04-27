@@ -2,13 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled, { createGlobalStyle } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
-
+import useCookie from "../hooks/useCookie"
+import CookieBanner from "./CookieBanner"
 import Header from "./header"
 import Footer from "./footer"
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: ${props => (props.theme === "purple" ? "purple" : "white")};
+    /* color: ${props => (props.theme === "purple" ? "purple" : "white")}; */
   }
 `
 
@@ -19,7 +20,9 @@ const MainWrapper = styled.div`
   padding: 0 1.0875rem 1.45rem;
 `
 
-const Layout = ({ children }) => {
+const COOKIE_BANNER = "gatsby-gdpr-google-analytics"
+
+const Layout = ({ children, path }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,6 +32,13 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+  const [showCookieBanner, onAllowCookie, onForbidCookie] = useCookie(
+    COOKIE_BANNER,
+    path
+  )
+
+  console.log("showCookieBanner", showCookieBanner)
 
   return (
     <>
@@ -41,6 +51,13 @@ const Layout = ({ children }) => {
         </MainWrapper>
 
         <Footer />
+
+        {showCookieBanner && (
+          <CookieBanner
+            onAllowCookie={onAllowCookie}
+            onForbidCookie={onForbidCookie}
+          />
+        )}
       </>
     </>
   )
