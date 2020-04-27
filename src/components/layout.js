@@ -38,8 +38,6 @@ const Layout = ({ children, path }) => {
     path
   )
 
-  console.log("showCookieBanner", showCookieBanner)
-
   return (
     <>
       <GlobalStyle theme="purple" />
