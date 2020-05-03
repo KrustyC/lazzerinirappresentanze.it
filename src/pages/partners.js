@@ -16,7 +16,7 @@ const Services = ({ data }) => {
 
 export const pageQuery = graphql`
   query GetServices {
-    markdownRemark(fileAbsolutePath: { regex: "/services/" }) {
+    markdownRemark(fileAbsolutePath: { regex: "/partners/" }) {
       frontmatter {
         title
       }

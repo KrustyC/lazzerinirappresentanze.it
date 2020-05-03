@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 
-const Partner = ({ data }) => {
+const Servizi = ({ data }) => {
   const { title } = data.markdownRemark.frontmatter
 
   return (
@@ -17,7 +17,7 @@ const Partner = ({ data }) => {
 
 export const pageQuery = graphql`
   query GetAbout {
-    markdownRemark(fileAbsolutePath: { regex: "/about/" }) {
+    markdownRemark(fileAbsolutePath: { regex: "/services/" }) {
       frontmatter {
         title
       }
@@ -25,4 +25,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default Partner
+export default Servizi
