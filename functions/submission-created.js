@@ -2,8 +2,6 @@ require("dotenv").config({
   path: `../.env.${process.env.NODE_ENV}`,
 })
 
-console.log(process.env.MJ_APIKEY_PUBLIC)
-
 const mailjet = require("node-mailjet").connect(
   process.env.MJ_APIKEY_PUBLIC,
   process.env.MJ_APIKEY_PRIVATE
