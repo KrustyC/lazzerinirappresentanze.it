@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import useCookie from "../hooks/useCookie"
 import CookieBanner from "./CookieBanner"
-import Header from "./header"
+import Header from "./Header"
 import Footer from "./Footer"
 import InitialOverlay from "./InitialOverlay"
 
