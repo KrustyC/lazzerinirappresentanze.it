@@ -1,17 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled, { createGlobalStyle } from "styled-components"
+import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import useCookie from "../hooks/useCookie"
 import CookieBanner from "./CookieBanner"
 import Header from "./header"
-import Footer from "./footer"
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    /* color: ${props => (props.theme === "purple" ? "purple" : "white")}; */
-  }
-`
+import Footer from "./Footer"
+import InitialOverlay from "./InitialOverlay"
 
 const MainWrapper = styled.div`
   min-height: 67vh;
@@ -38,25 +33,25 @@ const Layout = ({ children, path }) => {
     path
   )
 
+  const [showOverlay, setShowOverlay] = React.useState(false)
+
   return (
     <>
-      <GlobalStyle theme="purple" />
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+      {showOverlay && <InitialOverlay onHide={() => setShowOverlay(false)} />}
+      <Header siteTitle={data.site.siteMetadata.title} />
 
-        <MainWrapper>
-          <main>{children}</main>
-        </MainWrapper>
+      <MainWrapper>
+        <main>{children}</main>
+      </MainWrapper>
 
-        <Footer />
+      <Footer />
 
-        {showCookieBanner && (
-          <CookieBanner
-            onAllowCookie={onAllowCookie}
-            onForbidCookie={onForbidCookie}
-          />
-        )}
-      </>
+      {showCookieBanner && (
+        <CookieBanner
+          onAllowCookie={onAllowCookie}
+          onForbidCookie={onForbidCookie}
+        />
+      )}
     </>
   )
 }

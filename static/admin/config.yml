@@ -12,7 +12,7 @@ collections:
     editor:
       preview: false
     files:
-      - label: "Home"
+      - label: "Azienda"
         name: "home"
         file: "content/pages/home.md"
         fields:
@@ -29,32 +29,6 @@ collections:
               default: "Lazzerini Rappresentanze",
             }
           - { label: "Contenuto paragrafo", name: "body", widget: "markdown" }
-
-      - label: "Azienda"
-        name: "about"
-        file: "content/pages/about.md"
-        fields:
-          - {
-              label: "Titolo",
-              name: "title",
-              widget: "string",
-              default: "Azienda",
-            }
-          - {
-              label: "Layout",
-              name: "layout",
-              widget: "string",
-              default: "Di default",
-            }
-          - {
-              label: "Contenuto",
-              name: "body",
-              widget: "markdown",
-              default:
-                "Siamo un’agenzia di rappresentanza con l’obbiettivo di collegare le aziende rappresentate nei canali della
-                DO/GDO e INGROSSO FOOD&amp;BEVERAGE attraverso servizi che riteniamo essere fondamentali per garantire
-                a tutta la filiera commerciale un ottimo risultato sia a volume che a valore.",
-            }
 
       - label: "Servizi"
         name: "services"
@@ -83,6 +57,32 @@ collections:
               name: "address",
               widget: "string",
               default: "Via Dante, 20",
+            }
+
+      - label: "Partners"
+        name: "partners"
+        file: "content/pages/partners.md"
+        fields:
+          - {
+              label: "Titolo",
+              name: "title",
+              widget: "string",
+              default: "Azienda",
+            }
+          - {
+              label: "Layout",
+              name: "layout",
+              widget: "string",
+              default: "Di default",
+            }
+          - {
+              label: "Contenuto",
+              name: "body",
+              widget: "markdown",
+              default:
+                "Siamo un’agenzia di rappresentanza con l’obbiettivo di collegare le aziende rappresentate nei canali della
+                DO/GDO e INGROSSO FOOD&amp;BEVERAGE attraverso servizi che riteniamo essere fondamentali per garantire
+                a tutta la filiera commerciale un ottimo risultato sia a volume che a valore.",
             }
 
   - name: "partners"

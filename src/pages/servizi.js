@@ -7,7 +7,7 @@ const Partner = ({ data }) => {
 
   return (
     <>
-      <SEO title="Chi Siamo" />
+      <SEO title="Servizi" />
       <h1>{title}</h1>
       <p>Welcome to page 2</p>
       <Link to="/">Go back to the homepage</Link>

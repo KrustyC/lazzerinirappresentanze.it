@@ -1,59 +1,26 @@
 import React from "react"
-import { navigate } from "gatsby-link"
-
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
-
-const useForm = () => {}
+import { useFormikForm } from "../hooks/useFormikForm"
 
 export const Form = () => {
-  const [state, setState] = React.useState({})
-  const [successful, setSuccessful] = React.useState(false)
-  const [error, setError] = React.useState(null)
+  const [formik, state] = useFormikForm()
 
-  const handleChange = e => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = async e => {
-    e.preventDefault()
-
-    try {
-      const options = {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": e.target.getAttribute("name"),
-          ...state,
-        }),
-      }
-
-      await fetch("/", options)
-      setSuccessful(true)
-    } catch (error) {
-      setError(error)
-    }
-  }
-
+  console.log(formik)
   return (
     <div>
-      <h1>Contact</h1>
+      <h1>Contattaci</h1>
       <form
         name="contact"
-        method="post"
+        // method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        onSubmit={handleSubmit}
+        onSubmit={formik.handleSubmit}
       >
-        {successful && (
+        {state.success && (
           <h3 style={{ background: "green" }}>
             Grazie, ti risponderemo il prima possibile
           </h3>
         )}
-        {error && (
+        {state.error && (
           <h3 style={{ background: "red" }}>
             Oops! Sembrerebbe che si sia verificato un errore. Riprova a breve
           </h3>
@@ -62,34 +29,41 @@ export const Form = () => {
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
           <label>
-            Don’t fill this out:{" "}
-            <input name="bot-field" onChange={handleChange} />
+            Don’t fill this out: <input name="bot-field" />
           </label>
         </p>
-        <p>
-          <label>
-            Nome:
-            <br />
-            <input type="text" name="name" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Email:
-            <br />
-            <input type="email" name="email" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Messaggio:
-            <br />
-            <textarea name="message" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Invia</button>
-        </p>
+
+        <div>
+          <label htmlFor="name">Nome:</label>
+          <input name="name" {...formik.getFieldProps("name")} />
+          {formik.touched.name && formik.errors.name && (
+            <div>{formik.errors.name}</div>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input name="email" {...formik.getFieldProps("email")} />
+          {formik.touched.email && formik.errors.email && (
+            <div>{formik.errors.name}</div>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="message">Message:</label>
+          <input
+            name="message"
+            {...formik.getFieldProps("message")}
+            type="textarea"
+          />
+          {formik.touched.message && formik.errors.message && (
+            <div>{formik.errors.message}</div>
+          )}
+        </div>
+
+        <button type="submit" disabled={!formik.isValid || formik.isSubmitting}>
+          Invia
+        </button>
       </form>
     </div>
   )

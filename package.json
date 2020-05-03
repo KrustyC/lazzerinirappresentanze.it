@@ -6,6 +6,7 @@
   "author": "Davide Crestini <davide.crestini94@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
+    "formik": "^2.1.4",
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-gdpr-cookies": "^1.0.7",
@@ -22,14 +23,14 @@
     "gatsby-transformer-sharp": "^2.4.6",
     "netlify-cms-app": "^2.12.11",
     "node-mailjet": "^3.3.1",
-    "nodemailer": "^6.4.6",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
     "react-typography": "^0.16.19",
     "styled-components": "^5.1.0",
-    "typography": "^0.16.19"
+    "typography": "^0.16.19",
+    "yup": "^0.28.5"
   },
   "devDependencies": {
     "prettier": "2.0.4"

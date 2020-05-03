@@ -1,8 +1,15 @@
-// const nodemailer = require("nodemailer")
+require("dotenv").config({
+  path: `../.env.${process.env.NODE_ENV}`,
+})
+
+console.log(process.env.MJ_APIKEY_PUBLIC)
+
 const mailjet = require("node-mailjet").connect(
-  "c969391dbdc877ab18ed2e3ccaab9aa8",
-  "217106b7700cbc115e2a65e9c8b9a92c"
+  process.env.MJ_APIKEY_PUBLIC,
+  process.env.MJ_APIKEY_PRIVATE
 )
+
+console.log(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE)
 
 function createCompanyEmailHtml({ name, email, content }) {
   return `
@@ -44,12 +51,16 @@ function createCustomerEmailHtml({ name, email, content }) {
 }
 
 exports.handler = function (event, context, callback) {
-  const { payload } = JSON.parse(event.body)
-  const { name, email, message: content } = payload.data
+  const {
+    payload: {
+      data: { name, email, message: content },
+    },
+  } = JSON.parse(event.body)
+  // const { name, email, message: content } = data
 
   const companyMessage = {
     From: {
-      Email: "noreply@lazzerinirappresentanze.com",
+      Email: "noreply@lazzerinirappresentanze.it",
       Name: "No Reply",
     },
     To: [
@@ -66,7 +77,7 @@ exports.handler = function (event, context, callback) {
 
   const customerMessage = {
     From: {
-      Email: "noreply@lazzerinirappresentanze.com",
+      Email: "noreply@lazzerinirappresentanze.it",
       Name: "No Reply",
     },
     To: [
@@ -81,12 +92,14 @@ exports.handler = function (event, context, callback) {
     CustomID: "emailCustomer",
   }
 
-  mailjet
-    .post("send", { version: "v3.1" })
+  const request = mailjet.post("send", { version: "v3.1" })
+
+  request
     .request({
       Messages: [companyMessage, customerMessage],
     })
-    .then(() => {
+    .then(result => {
+      console.log("good", result.body)
       callback(null, {
         statusCode: 200,
         body: "Emails sent!",

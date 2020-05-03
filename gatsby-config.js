@@ -16,8 +16,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-portal`,
       options: {
-        key: 'portal',
-        id: 'portal',        
+        key: "cookie-banner-portal",
+        id: "cookie-banner-portal",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: "initial-overlay-portal",
+        id: "initial-overlay-portal",
       },
     },
     {
@@ -25,10 +32,10 @@ module.exports = {
       options: {
         googleAnalytics: {
           trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
-          cookieName: 'gatsby-gdpr-google-analytics', // default
-          anonymize: true // default
+          cookieName: "gatsby-gdpr-google-analytics", // default
+          anonymize: true, // default
         },
-        environments: ['production', 'development']
+        environments: ["production", "development"],
       },
     },
     {
