@@ -17,7 +17,6 @@ const InnerFooter = styled.div`
   align-items: center;
   justify-content: center;
   height: 160px;
-  /* background: green; */
 
   div {
     padding: 0 3rem;
@@ -57,8 +56,8 @@ const Right = styled.div`
   font-size: 14px;
 `
 
-const Layout = ({ children }) => {
-  const currentYear = new Date().getFullYear()
+const Layout = () => {
+  // const currentYear = new Date().getFullYear()
 
   return (
     <FooterWrapper>

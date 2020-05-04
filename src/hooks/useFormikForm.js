@@ -16,6 +16,10 @@ const validationSchema = Yup.object({
   email: Yup.string()
     .email("Inserire un indirizzo email corrretto")
     .required("Per favore inserire un'email"),
+  subject: Yup.string()
+    .min(5, "Inserire almeno 5 caratteri")
+    .max(100, "Inserire meno di 100 caratteri")
+    .required("Perfavore inserire un oggetto"),
   message: Yup.string()
     .min(50, "Inserire almeno 50 caratteri")
     .max(500, "Inserire meno di 500 caratteri")
@@ -65,6 +69,7 @@ export const useFormikForm = () => {
     initialValues: {
       email: "",
       name: "",
+      subject: "",
       message: "",
     },
     onSubmit,
