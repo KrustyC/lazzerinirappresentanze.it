@@ -16,11 +16,13 @@ const OverlayContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: q00;
+  overflow: hidden;
 `
 
 const Slogan = styled.h1`
   color: white;
   font-size: 81px;
+  margin-top: 100px;
   max-width: ${({ theme }) => theme.sizes.desktop.centralColumn};
 `
 
@@ -31,7 +33,7 @@ const LogoContainer = styled.div`
 
 const InitialOverlay = ({ onHide }) => {
   return (
-    <Portal id="portal">
+    <Portal id="initial-overlay-portal">
       <OverlayContainer onClick={onHide}>
         <Slogan>
           Trovarsi insieme e' un inizio, restare insieme un progresso, lavorare
