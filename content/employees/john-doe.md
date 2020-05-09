@@ -1,5 +1,5 @@
 ---
 title: John Doe
 job: Sales Manager
-picture: /img/thumb.png
+picture: /img/tipo1.jpg
 ---
