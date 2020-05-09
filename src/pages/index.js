@@ -1,58 +1,66 @@
 import React from "react"
+import styled from "styled-components"
 import { graphql } from "gatsby"
+import { Markdown } from "../components/Markdown"
 import { Parallax } from "../components/Parallax"
 import { CenteredColumn } from "../components/CenteredColumn"
 import { Employees } from "../components/Employees"
 import SEO from "../components/seo"
 
-const title = "Chi Siamo"
-const intro =
-  "Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor "
-const outHistory1 =
-  "History 1 ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor "
-const outHistory2 =
-  "History 2 ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor "
+const PageContainer = styled.div`
+  margin-bottom: 100px;
+`
 
-const IndexPage = () => (
-  <>
-    <SEO title="Azienda" />
+const IndexPage = ({ data }) => {
+  const {
+    title,
+    introduction,
+    ourHistory1,
+    ourHistory2,
+  } = data.markdownRemark.frontmatter
 
-    <CenteredColumn>
-      <h1>{title}</h1>
-      <p>{intro}</p>
-    </CenteredColumn>
+  return (
+    <>
+      <SEO title="Azienda" />
 
-    <Employees />
+      <PageContainer>
+        <CenteredColumn>
+          <h1>{title}</h1>
+          <Markdown md={introduction} />
+        </CenteredColumn>
 
-    <CenteredColumn>
-      <h1>La nostra storia</h1>
-      <p>{outHistory1}</p>
-    </CenteredColumn>
+        <Employees />
 
-    <Parallax />
+        <CenteredColumn>
+          <h1>La nostra storia</h1>
+          <Markdown md={ourHistory1} />
+        </CenteredColumn>
 
-    <CenteredColumn>
-      <p>{intro}</p>
-    </CenteredColumn>
+        <Parallax />
 
-    {/* <CenteredColumn>
+        <CenteredColumn>
+          <Markdown md={ourHistory2} />
+        </CenteredColumn>
+
+        {/* <CenteredColumn>
       <h1>I nostri partner</h1>
     </CenteredColumn> */}
-  </>
-)
+      </PageContainer>
+    </>
+  )
+}
 
 export const pageQuery = graphql`
   query GetHome {
     markdownRemark(fileAbsolutePath: { regex: "/home/" }) {
       frontmatter {
         title
+        introduction
+        ourHistory1
+        ourHistory2
       }
     }
   }
 `
-
-// intro
-// ourHistory1
-// ourHistory2
 
 export default IndexPage
