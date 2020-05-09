@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-// import Image from "../components/image"
+import {Parallax} from "../components/Parallax"
 import { CenteredColumn } from "../components/CenteredColumn"
 import { Employees } from "../components/Employees"
 import SEO from "../components/seo"
@@ -16,14 +16,33 @@ const outHistory2 =
 const IndexPage = () => (
   <>
     <SEO title="Azienda" />
+
     <CenteredColumn>
       <h1>{title}</h1>
       <p>{intro}</p>
     </CenteredColumn>
+
     <Employees />
 
+    <CenteredColumn>
+      <h1>La nostra storia</h1>
+      <p>{outHistory1}</p>
+    </CenteredColumn>
+
+    <Parallax />
+
+    <CenteredColumn>
+      <p>{intro}</p>
+    </CenteredColumn>
+
+
+    <CenteredColumn>
+      <h1>I nostri partner</h1>
+    </CenteredColumn>
+
+
     {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+      
     </div> */}
   </>
 )

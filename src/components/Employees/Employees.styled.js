@@ -5,7 +5,7 @@ const EmployeesContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 80vw;
-  margin: 50px auto;
+  margin: 100px auto;
 `
 
 const Employee = styled.div`
