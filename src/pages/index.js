@@ -1,17 +1,30 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Image from "../components/image"
+// import Image from "../components/image"
+import { CenteredColumn } from "../components/CenteredColumn"
+import { Employees } from "../components/Employees"
 import SEO from "../components/seo"
+
+const title = "Chi Siamo"
+const intro =
+  "Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor "
+const outHistory1 =
+  "History 1 ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor "
+const outHistory2 =
+  "History 2 ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor "
 
 const IndexPage = () => (
   <>
     <SEO title="Azienda" />
-    <h1>Ciao</h1>
-    <p>Lazzerini Rappresentanze.</p>
+    <CenteredColumn>
+      <h1>{title}</h1>
+      <p>{intro}</p>
+    </CenteredColumn>
+    <Employees />
 
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
-    </div>
+    </div> */}
   </>
 )
 
@@ -24,5 +37,9 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// intro
+// ourHistory1
+// ourHistory2
 
 export default IndexPage

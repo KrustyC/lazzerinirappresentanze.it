@@ -3,11 +3,11 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,
-  headerFontFamily: ["Raleway", "Arial", "sans-serif"],
-  bodyFontFamily: ["Raleway", "serif"],
+  headerFontFamily: ["Spartan", "Arial", "sans-serif"],
+  bodyFontFamily: ["Spartan", "serif"],
   googleFonts: [
     {
-      name: "Raleway",
+      name: "Spartan",
       styles: ["100", "200", "300", "400", "400i", "700", "700i"],
     },
   ],

@@ -3,14 +3,15 @@ import { createGlobalStyle, ThemeProvider } from "styled-components"
 import Layout from "./src/components/Layout"
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    /* color: ${props => (props.theme === "purple" ? "purple" : "white")}; */
+  * {
+    color: ${({ theme }) => theme.colors.text} !important;
   }
 `
 
 const theme = {
   colors: {
     primary: "#F7F00B",
+    text: "#5A5A5A",
   },
   sizes: {
     desktop: {
