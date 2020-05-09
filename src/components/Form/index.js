@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { ErrorMessage } from 'formik'
 import { CenteredColumn } from "../CenteredColumn"
 import { useContactForm } from "../../hooks/useContactForm"
 import {
