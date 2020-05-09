@@ -22,13 +22,9 @@ collections:
               widget: "string",
               default: "Chi Siamo",
             }
-          - {
-              label: "Slogan",
-              name: "slogan",
-              widget: "string",
-              default: "Lazzerini Rappresentanze",
-            }
-          - { label: "Contenuto paragrafo", name: "body", widget: "markdown" }
+          - { label: "Introduzione", name: "introduction", widget: "markdown" }
+          - { label: "La nostra storia (sopra immagine)", name: "ourHistory1", widget: "markdown" }
+          - { label: "La nostra storia (sotto immagine)", name: "ourHistory2", widget: "markdown" }
 
       - label: "Servizi"
         name: "services"
