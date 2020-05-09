@@ -4,7 +4,7 @@ const EmployeesContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80vw;
+  width: 90vw;
   margin: 100px auto;
 `
 
