@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import CenteredColumn from "../CenteredColumn"
+import { CenteredColumn } from "../CenteredColumn"
 
 const Container = styled(CenteredColumn)`
   display: flex;

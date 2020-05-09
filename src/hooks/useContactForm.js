@@ -12,21 +12,22 @@ const validationSchema = Yup.object({
   name: Yup.string()
     .min(3, "Minimo 3 caratteri")
     .max(30, "Massimo 30 caratteri")
-    .required("Perfavore inserire un nome"),
+    .required("Per favore inserire un nome"),
   email: Yup.string()
     .email("Inserire un indirizzo email corrretto")
     .required("Per favore inserire un'email"),
   subject: Yup.string()
     .min(5, "Inserire almeno 5 caratteri")
     .max(100, "Inserire meno di 100 caratteri")
-    .required("Perfavore inserire un oggetto"),
+    .required("Per favore inserire un oggetto"),
   message: Yup.string()
     .min(50, "Inserire almeno 50 caratteri")
     .max(500, "Inserire meno di 500 caratteri")
-    .required("Perfavore inserire un messaggio"),
+    .required("Per favore inserire un messaggio"),
+  policy: Yup.bool().oneOf([true], "E' necessario accettare la privacy policy"),
 })
 
-export const useFormikForm = () => {
+export const useContactForm = () => {
   const [state, setState] = React.useState({
     error: null,
     pending: false,

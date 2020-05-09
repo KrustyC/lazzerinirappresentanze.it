@@ -1,19 +1,22 @@
 import React from "react"
-import CenteredColumn from "../CenteredColumn"
-import { useFormikForm } from "../../hooks/useFormikForm"
+import { Link } from "gatsby"
+import { ErrorMessage } from 'formik'
+import { CenteredColumn } from "../CenteredColumn"
+import { useContactForm } from "../../hooks/useContactForm"
 import {
   StyledForm,
   Row,
+  BottomRow,
   Textarea,
   Input,
   InputGroup,
+  PolicyRow,
   Button,
 } from "./Form.styled"
 
 export const Form = () => {
-  const [formik, state] = useFormikForm()
+  const [contactForm, { success, error }] = useContactForm()
 
-  console.log(formik)
   return (
     <CenteredColumn>
       <StyledForm
@@ -21,15 +24,15 @@ export const Form = () => {
         // method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        onSubmit={formik.handleSubmit}
+        onSubmit={contactForm.handleSubmit}
       >
-        {state.success && (
+        {success && (
           <h3 style={{ background: "green" }}>
             Grazie, ti risponderemo il prima possibile
           </h3>
         )}
 
-        {state.error && (
+        {error && (
           <h3 style={{ background: "red" }}>
             Oops! Sembrerebbe che si sia verificato un errore. Riprova a breve
           </h3>
@@ -45,45 +48,74 @@ export const Form = () => {
 
         <Row>
           <InputGroup>
-            <Input name="name" {...formik.getFieldProps("name")} />
-            {formik.touched.name && formik.errors.name && (
-              <div>{formik.errors.name}</div>
+            <Input
+              name="name"
+              placeholder="Nome"
+              {...contactForm.getFieldProps("name")}
+            />
+            {contactForm.touched.name && contactForm.errors.name && (
+              <div>{contactForm.errors.name}</div>
             )}
           </InputGroup>
 
           <InputGroup>
-            {/* <label htmlFor="email">Email:</label> */}
-            <Input name="email" {...formik.getFieldProps("email")} />
-            {formik.touched.email && formik.errors.email && (
-              <div>{formik.errors.name}</div>
+            <Input
+              name="email"
+              placeholder="Email"
+              {...contactForm.getFieldProps("email")}
+            />
+            {contactForm.touched.email && contactForm.errors.email && (
+              <div>{contactForm.errors.email}</div>
             )}
           </InputGroup>
         </Row>
 
         <InputGroup>
-          {/* <label htmlFor="name">Oggetto:</label> */}
-          <Input name="subject" {...formik.getFieldProps("subject")} />
-          {formik.touched.subject && formik.errors.subject && (
-            <div>{formik.errors.subject}</div>
+          <Input
+            name="subject"
+            placeholder="Oggetto"
+            {...contactForm.getFieldProps("subject")}
+          />
+          {contactForm.touched.subject && contactForm.errors.subject && (
+            <div>{contactForm.errors.subject}</div>
           )}
         </InputGroup>
 
         <InputGroup>
-          {/* <label htmlFor="message">Message:</label> */}
           <Textarea
             name="message"
-            {...formik.getFieldProps("message")}
+            placeholder="Messaggio"
+            {...contactForm.getFieldProps("message")}
             type="textarea"
             rows={10}
           />
-          {formik.touched.message && formik.errors.message && (
-            <div>{formik.errors.message}</div>
+          {contactForm.touched.message && contactForm.errors.message && (
+            <div>{contactForm.errors.message}</div>
           )}
         </InputGroup>
 
-        <Button type="submit" disabled={!formik.isValid || formik.isSubmitting}>
-          Invia
-        </Button>
+        <BottomRow>
+          <PolicyRow>
+            <input
+              name="policy"
+              type="checkbox"
+              // checked={field.value}
+              {...contactForm.getFieldProps("policy")}
+            />
+            <span>
+              Confermo di aver preso visione dell'
+              <Link to="/privacy-policy">
+                informativa sul trattamento dei dati
+              </Link>
+            </span>
+          </PolicyRow>
+          <Button
+            type="submit"
+            disabled={!contactForm.isValid || contactForm.isSubmitting}
+          >
+            Invia
+          </Button>
+        </BottomRow>
       </StyledForm>
     </CenteredColumn>
   )

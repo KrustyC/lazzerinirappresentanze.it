@@ -96,3 +96,15 @@ collections:
       - { label: "Nome", name: "title", widget: "string" }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Logo", name: "logo", widget: "image"}
+  
+  - name: "employees"
+    label: "Personale"
+    folder: "content/employees"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Nome", name: "title", widget: "string" }
+      - { label: "Titolo di lavoro", name: "job", widget: "string" }
+      - { label: "Foto", name: "picture", widget: "image"}

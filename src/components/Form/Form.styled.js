@@ -24,6 +24,13 @@ export const Input = styled.input`
   border-radius: 50px;
   border: none;
   width: 100%;
+
+  padding-left: 20px;
+  font-weight: bold;
+  color: white;
+  ::placeholder {
+    opacity: 0.9;
+  }
 `
 
 export const Textarea = styled.textarea`
@@ -31,10 +38,37 @@ export const Textarea = styled.textarea`
     background: white;
     border: 2px solid ${theme.colors.primary};
     border-radius: 20px;
-    /* border: none; */
     width: 100%;
     resize: none;
+
+    padding-top: 10px;
+    padding-left: 20px;
+    color: black;
+    ::placeholder {
+      font-weight: bold;
+      opacity: 1;
+    }
   `}
+`
+
+export const BottomRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+export const PolicyRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  span {
+    margin-left: 10px;
+    font-weight: bold;
+    a {
+      color: black;
+    }
+  }
 `
 
 export const Button = styled.button`
@@ -44,4 +78,8 @@ export const Button = styled.button`
   width: 100px;
   height: 50px;
   border-radius: 50px;
+
+  :disabled {
+    opacity: 0.5;
+  }
 `

@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
-import CenteredColumn from "../components/CenteredColumn"
+import { CenteredColumn } from "../components/CenteredColumn"
 import { Form } from "../components/Form"
-import Map from "../components/Map"
+import { Map } from "../components/Map"
 import { OfficeInfo } from "../components/OfficeInfo"
 
 const Contact = ({ data }) => {
