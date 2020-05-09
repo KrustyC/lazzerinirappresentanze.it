@@ -30,7 +30,7 @@ const Layout = ({ children, path }) => {
     path
   )
 
-  const [showOverlay, setShowOverlay] = React.useState(false)
+  const [showOverlay, setShowOverlay] = React.useState(true)
 
   return (
     <>
