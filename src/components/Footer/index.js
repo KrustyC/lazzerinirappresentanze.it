@@ -16,7 +16,7 @@ const InnerFooter = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 160px;
+  height: 180px;
 
   div {
     padding: 0 3rem;
@@ -29,7 +29,6 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
 `
 
 const Center = styled.div`
@@ -51,6 +50,7 @@ const StyledLink = styled(Link)`
 `
 
 const Right = styled.div`
+  color: white !important;
   flex: 3;
   font-weight: bold;
   font-size: 14px;

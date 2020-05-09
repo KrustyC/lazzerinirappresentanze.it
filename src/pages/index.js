@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import {Parallax} from "../components/Parallax"
+import { Parallax } from "../components/Parallax"
 import { CenteredColumn } from "../components/CenteredColumn"
 import { Employees } from "../components/Employees"
 import SEO from "../components/seo"
@@ -35,15 +35,9 @@ const IndexPage = () => (
       <p>{intro}</p>
     </CenteredColumn>
 
-
-    <CenteredColumn>
+    {/* <CenteredColumn>
       <h1>I nostri partner</h1>
-    </CenteredColumn>
-
-
-    {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      
-    </div> */}
+    </CenteredColumn> */}
   </>
 )
 
