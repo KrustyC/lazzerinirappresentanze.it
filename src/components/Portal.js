@@ -3,6 +3,11 @@ import usePortal from "../hooks/usePortal"
 
 const Portal = ({ id, children }) => {
   const target = usePortal(id)
+
+  if (!target) {
+    return null
+  }
+
   return ReactDOM.createPortal(children, target)
 }
 
