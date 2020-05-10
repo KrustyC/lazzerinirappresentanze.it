@@ -32,9 +32,12 @@ const Layout = ({ children, path }) => {
 
   const [showOverlay, setShowOverlay] = React.useState(true)
 
+  if (showOverlay) {
+    return <InitialOverlay onHide={() => setShowOverlay(false)} />
+  }
+
   return (
     <>
-      {showOverlay && <InitialOverlay onHide={() => setShowOverlay(false)} />}
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <MainWrapper>{children}</MainWrapper>

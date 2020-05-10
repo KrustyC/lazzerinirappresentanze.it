@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Portal from "../Portal"
 import Logo from "./Logo"
 
-const OverlayContainer = styled.div`
+const InitialOverlayContainer = styled.div`
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -34,16 +34,16 @@ const LogoContainer = styled.div`
 const InitialOverlay = ({ onHide }) => {
   return (
     <Portal id="initial-overlay-portal">
-      <OverlayContainer onClick={onHide}>
+      <InitialOverlayContainer onClick={onHide}>
         <Slogan>
-          Trovarsi insieme e' un inizio, restare insieme un progresso, lavorare
+          Trovarsi insieme  è un inizio, restare insieme un progresso, lavorare
           insieme un successo!
         </Slogan>
 
         <LogoContainer>
           <Logo />
         </LogoContainer>
-      </OverlayContainer>
+      </InitialOverlayContainer>
     </Portal>
   )
 }
