@@ -16,7 +16,6 @@ function useCookie(cookieName, path) {
 
   useEffect(() => {
     const cookie = localStorage.getItem(cookieName)
-    console.log('COOKIE', cookie)
     if (!cookie) {
       setShowCookieBanner(true)
     }

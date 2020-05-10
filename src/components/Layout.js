@@ -32,7 +32,7 @@ const Layout = ({ children, path }) => {
 
   const [showOverlay, setShowOverlay] = React.useState(true)
 
-  if (showOverlay) {
+  if (false) {
     return <InitialOverlay onHide={() => setShowOverlay(false)} />
   }
 

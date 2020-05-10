@@ -6,7 +6,7 @@ function isClient() {
 
 function usePortal(id) {
   const rootElemRef = React.useRef(null)
-  console.log(id)
+
   React.useEffect(() => {
     const parentElem = isClient() ? document.querySelector(`#${id}`) : null
 
