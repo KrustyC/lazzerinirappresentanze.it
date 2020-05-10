@@ -1,3 +1,3 @@
 ---
-title: Chi Siamo
+title: I nostri partner
 ---

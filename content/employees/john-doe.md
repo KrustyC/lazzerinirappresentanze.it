@@ -1,5 +1,5 @@
 ---
-title: John Doe
+name: John Doe
 job: Sales Manager
 picture: /img/tipo1.jpg
 ---

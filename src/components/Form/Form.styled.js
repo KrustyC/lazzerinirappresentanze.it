@@ -78,8 +78,9 @@ export const Button = styled.button`
   width: 100px;
   height: 50px;
   border-radius: 50px;
+  color: white !important;
 
   :disabled {
-    opacity: 0.5;
+    opacity: 0.6;
   }
 `

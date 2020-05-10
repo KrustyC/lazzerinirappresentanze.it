@@ -98,7 +98,6 @@ export const Form = () => {
             <input
               name="policy"
               type="checkbox"
-              // checked={field.value}
               {...contactForm.getFieldProps("policy")}
             />
             <span>
