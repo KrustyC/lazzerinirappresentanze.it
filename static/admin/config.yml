@@ -12,7 +12,7 @@ collections:
     editor:
       preview: false
     files:
-      - label: "Azienda"
+      - label: "Home Page"
         name: "home"
         file: "content/pages/home.md"
         fields:
@@ -38,6 +38,22 @@ collections:
             }
           - { label: "Cosa Facciamo", name: "body", widget: "markdown" }
 
+      - label: "Partners"
+        name: "partners"
+        file: "content/pages/partners.md"
+        fields:
+          - {
+              label: "Titolo",
+              name: "title",
+              widget: "string",
+              default: "Azienda",
+            }
+          - {
+              label: "Intestazione",
+              name: "body",
+              widget: "markdown",
+            }
+
       - label: "Contatti"
         name: "contacts"
         file: "content/pages/contacts.md"
@@ -53,22 +69,6 @@ collections:
               name: "address",
               widget: "string",
               default: "Via Dante, 20",
-            }
-
-      - label: "Partners"
-        name: "partners"
-        file: "content/pages/partners.md"
-        fields:
-          - {
-              label: "Titolo",
-              name: "title",
-              widget: "string",
-              default: "Azienda",
-            }
-          - {
-              label: "Intestazione",
-              name: "body",
-              widget: "markdown",
             }
 
   - name: "partners-data"
@@ -87,7 +87,7 @@ collections:
     label: "Personale"
     folder: "content/employees"
     create: true
-    slug: "{{slug}}"
+    slug: "{{name}}"
     editor:
       preview: false
     fields:
