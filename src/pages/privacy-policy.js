@@ -1,15 +1,15 @@
 import React from "react"
 import styled from "styled-components"
+import { CenteredColumn } from "../components/CenteredColumn"
 
 const Title = styled.h1``
-// const Section = styled.div``
 const SectionTitle = styled.h1``
 const Ul = styled.ul``
 const Li = styled.li``
 const P = styled.p``
 
 const PrivacyPolicy = () => (
-  <>
+  <CenteredColumn css="margin-bottom: 100px;">
     <Title>Privacy Policy</Title>
     <P>
       <strong>
@@ -350,7 +350,7 @@ const PrivacyPolicy = () => (
       accetti i suoi termini. Se desideri ulteriori informazioni o hai domande
       sulla nostra politica sulla privacy non esitare a contattarci.
     </P>
-  </>
+  </CenteredColumn>
 )
 
 export default PrivacyPolicy
