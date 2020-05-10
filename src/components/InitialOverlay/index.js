@@ -4,7 +4,7 @@ import Portal from "../Portal"
 import Logo from "./Logo"
 
 const OverlayContainer = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background: ${({ theme }) => theme.colors.primary};
@@ -15,7 +15,7 @@ const OverlayContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: q00;
+  z-index: 200;
   overflow: hidden;
 `
 
