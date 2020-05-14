@@ -33,14 +33,14 @@ const Partners = ({ data }) => {
     ({ node: { frontmatter } }) => frontmatter
   )
 
-  const { title } = data.markdownRemark.frontmatter
+  const { title, body } = data.markdownRemark.frontmatter
 
   return (
     <>
       <SEO title="I nostri partner" />
       <CenteredColumn>
         <h1>{title}</h1>
-        {/* <Markdown md={} /> */}
+        <Markdown md={body} />
       </CenteredColumn>
       <PartnersGrid>
         {partners.map(({ name, link, logo }) => (

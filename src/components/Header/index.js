@@ -7,7 +7,7 @@ import Logo from "./Logo"
 
 const HeaderWrapper = styled.div`
   /* background: red; */
-  height: 130px;
+  height: 110px;
   /* background: red; */
   margin-bottom: 1.45rem;
 `

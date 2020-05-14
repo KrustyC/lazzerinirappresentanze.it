@@ -4,13 +4,13 @@ import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 const StyledImaged = styled(BackgroundImage)`
- width: 100vw;
-    height: 600px;
-    margin: 100px 0px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 100vw;
+  height: 600px;
+  margin: 100px 0px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `
 
 export const Parallax = () => {
@@ -27,8 +27,5 @@ export const Parallax = () => {
   `)
 
   const imageData = data.desktop.childImageSharp.fluid
-  return (
-    <StyledImaged Tag="div" fluid={imageData} backgroundColor="#040e18" />
-  )
+  return <StyledImaged Tag="div" fluid={imageData} backgroundColor="#040e18" />
 }
-

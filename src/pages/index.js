@@ -41,10 +41,6 @@ const IndexPage = ({ data }) => {
         <CenteredColumn>
           <Markdown md={ourHistory2} />
         </CenteredColumn>
-
-        {/* <CenteredColumn>
-      <h1>I nostri partner</h1>
-    </CenteredColumn> */}
       </PageContainer>
     </>
   )

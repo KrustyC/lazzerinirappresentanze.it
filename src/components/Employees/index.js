@@ -28,7 +28,7 @@ export const Employees = () => {
   return (
     <EmployeesContainer>
       {employees.map(({ name, job, picture }) => (
-        <Employee>
+        <Employee key={name}>
           <Employee.Container>
             <Employee.Pic>
               <Employee.Pic.Image urlSrc={picture} />
