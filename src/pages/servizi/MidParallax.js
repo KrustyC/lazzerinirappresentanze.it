@@ -6,8 +6,8 @@ import BackgroundImage from "gatsby-background-image"
 const StyledImaged = styled(BackgroundImage)`
   width: 100vw;
   height: 300px;
-  margin-bottom: 400px;
-  /* background-attachment: fixed; */
+  margin-bottom: 200px;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

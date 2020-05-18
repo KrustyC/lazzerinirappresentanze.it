@@ -7,6 +7,7 @@ import LinkedInLogo from "./LinkedInLogo"
 import { footerLinks } from "../../utils/links"
 
 const FooterWrapper = styled.footer`
+  width: 100%;
   background: black;
   color: white;
   padding: 4rem 5rem;
