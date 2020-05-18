@@ -1,11 +1,11 @@
 import React from "react"
 import styled, { css } from "styled-components"
 import SEO from "../../components/seo"
-import { TopParallax } from "./TopParallax"
-import { MidParallax } from "./MidParallax"
-import { BottomParallax } from "./BottomParallax"
-import { ParallaxItem } from "./ParallaxItem"
-import services from "./services"
+import { TopParallax } from "./_TopParallax"
+import { MidParallax } from "./_MidParallax"
+import { BottomParallax } from "./_BottomParallax"
+import { ParallaxItem } from "./_ParallaxItem"
+import services from "./_services"
 
 const Wrapper = styled.div`
   min-height: 2600px;
