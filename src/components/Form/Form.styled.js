@@ -27,7 +27,7 @@ export const Input = styled.input`
 
   padding-left: 20px;
   font-weight: bold;
-  color: white;
+  color: white !important;
   ::placeholder {
     opacity: 0.9;
   }
@@ -45,6 +45,8 @@ export const Textarea = styled.textarea`
     padding-left: 20px;
     color: black;
     ::placeholder {
+      color: ${theme.colors.primary};
+
       font-weight: bold;
       opacity: 1;
     }

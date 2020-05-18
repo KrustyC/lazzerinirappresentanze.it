@@ -20,7 +20,7 @@ const rand = (min = 0, max = 100) => {
 }
 
 export const ParallaxItem = ({ left, children }) => {
-  const range = 0.2
+  const range = 0.1
   const { scrollY } = useViewportScroll()
   const ref = useRef()
   const [offsetTop, setOffsetTop] = useState(0)

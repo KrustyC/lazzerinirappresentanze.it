@@ -8,7 +8,7 @@ import { ParallaxItem } from "./_ParallaxItem"
 import services from "./_services"
 
 const Wrapper = styled.div`
-  min-height: 2600px;
+  min-height: 2100px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -38,7 +38,8 @@ const Foreground = styled.div`
 const FirstBox = styled.div`
   width: 70vw;
   height: 200px;
-  margin-top: 0;
+  margin-top: 100px;
+  margin-bottom: 80px;
   background: rgba(0, 0, 0, 0.5);
   * {
     color: white !important;
@@ -57,16 +58,16 @@ const FirstBox = styled.div`
 const ServiceBox = styled.div`
   ${({ theme, left }) => css`
     width: 70vw;
-    height: 200px;
+    height: 160px;
     background: ${theme.colors.primary};
     z-index: 100;
     padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: ${left ? "flex-end" : "flex-start"};
-    box-shadow: ${`${left ? "" : "-"}6px`} 7px 6px -2px rgba(217, 217, 217, 1);
+    box-shadow: ${`${left ? "" : "-"}6px`} 7px 6px -2px rgba(0, 0, 0, 0.5);
 
-    margin-top: 100px;
+    margin-top: 70px;
 
     * {
       color: white !important;
@@ -74,7 +75,7 @@ const ServiceBox = styled.div`
 
     > div {
       display: flex;
-      height: 80px;
+      height: auto;
 
       width: 700px;
     }
@@ -104,12 +105,14 @@ const Servizi = () => {
         </Background>
 
         <Foreground>
-          <FirstBox>
-            <h1>“I nostri servizi diventano veri punti di forza”</h1>
-            La nostra società oltre alla principale attività di rappresentanza
-            offre i seguenti servizi necessari per garantire all’aziende la
-            giusta distribuzione nel territorio
-          </FirstBox>
+          <ParallaxItem left>
+            <FirstBox>
+              <h1>“I nostri servizi diventano veri punti di forza”</h1>
+              La nostra società oltre alla principale attività di rappresentanza
+              offre i seguenti servizi necessari per garantire all’aziende la
+              giusta distribuzione nel territorio
+            </FirstBox>
+          </ParallaxItem>
           {services.map(({ id, text }, i) => (
             <ParallaxItem key={id} left={i % 2 !== 0}>
               <ServiceBox left={i % 2 !== 0}>
