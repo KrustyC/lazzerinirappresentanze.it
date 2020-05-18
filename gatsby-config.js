@@ -22,13 +22,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-portal`,
-      options: {
-        key: "initial-overlay-portal",
-        id: "initial-overlay-portal",
-      },
-    },
-    {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {

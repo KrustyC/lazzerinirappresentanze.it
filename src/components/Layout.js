@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { useCycle } from "framer-motion"
 import { useStaticQuery, graphql } from "gatsby"
 import useCookie from "../hooks/useCookie"
 import CookieBanner from "./CookieBanner"
@@ -30,25 +31,26 @@ const Layout = ({ children, path }) => {
     path
   )
 
-  const [showOverlay, setShowOverlay] = React.useState(true)
-
-  if (showOverlay) {
-    return <InitialOverlay onHide={() => setShowOverlay(false)} />
-  }
+  const [isVisible, onCycle] = useCycle(true, false)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <InitialOverlay isVisible={isVisible} onHide={onCycle} />
+      {!isVisible && (
+        <>
+          <Header siteTitle={data.site.siteMetadata.title} />
 
-      <MainWrapper>{children}</MainWrapper>
+          <MainWrapper>{children}</MainWrapper>
 
-      <Footer />
+          <Footer />
 
-      {showCookieBanner && (
-        <CookieBanner
-          onAllowCookie={onAllowCookie}
-          onForbidCookie={onForbidCookie}
-        />
+          {showCookieBanner && (
+            <CookieBanner
+              onAllowCookie={onAllowCookie}
+              onForbidCookie={onForbidCookie}
+            />
+          )}
+        </>
       )}
     </>
   )

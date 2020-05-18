@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Portal from "../Portal"
+import { motion, AnimatePresence } from "framer-motion"
 import Logo from "./Logo"
 
 const InitialOverlayContainer = styled.div`
@@ -31,20 +31,29 @@ const LogoContainer = styled.div`
   margin-top: 5rem;
 `
 
-const InitialOverlay = ({ onHide }) => {
+const InitialOverlay = ({ isVisible, onHide }) => {
   return (
-    <Portal id="initial-overlay-portal">
-      <InitialOverlayContainer onClick={onHide}>
-        <Slogan>
-          Trovarsi insieme  è un inizio, restare insieme un progresso, lavorare
-          insieme un successo!
-        </Slogan>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          key="child"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <InitialOverlayContainer onClick={onHide}>
+            <Slogan>
+              Trovarsi insieme è un inizio, restare insieme un progresso,
+              lavorare insieme un successo!
+            </Slogan>
 
-        <LogoContainer>
-          <Logo />
-        </LogoContainer>
-      </InitialOverlayContainer>
-    </Portal>
+            <LogoContainer>
+              <Logo />
+            </LogoContainer>
+          </InitialOverlayContainer>
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }
 
