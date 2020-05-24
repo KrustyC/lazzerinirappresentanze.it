@@ -36,7 +36,7 @@ const services = [
   },
   {
     id: 6,
-    text: () => <>Rilevazione prezzi a scaffale Commerciale</>,
+    text: () => <>Rilevazione prezzi a scaffale</>,
   },
   {
     id: 7,

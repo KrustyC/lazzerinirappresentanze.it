@@ -8,7 +8,7 @@ import { ParallaxItem } from "./_ParallaxItem"
 import services from "./_services"
 
 const Wrapper = styled.div`
-  min-height: 2100px;
+  min-height: 2150px;
   position: relative;
   width: 100%;
   height: 100%;
@@ -77,7 +77,7 @@ const ServiceBox = styled.div`
       display: flex;
       height: auto;
 
-      width: 700px;
+      width: 56%;
     }
   `}
 `
@@ -89,8 +89,10 @@ const Number = styled.h1`
   font-weight: bold;
 `
 const Text = styled.span`
+  margin: 0;
+  margin-top: -3px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
 `
 
 const Servizi = () => {

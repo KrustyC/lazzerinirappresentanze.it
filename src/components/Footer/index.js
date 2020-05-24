@@ -18,7 +18,6 @@ const InnerFooter = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 210px;
 
   > div {
     padding: 0 2rem;
@@ -49,6 +48,10 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
 `
 
 const Right = styled.div`
