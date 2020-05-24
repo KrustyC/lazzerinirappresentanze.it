@@ -33,7 +33,7 @@ function useCookie(cookieName, path) {
       localStorage.setItem(cookieName, true)
       setShowCookieBanner(false)
     }
-  }, [path, cookieName, isMounted])
+  }, [path])
 
   return [showCookieBanner, allowCookie, forbidCookie]
 }
