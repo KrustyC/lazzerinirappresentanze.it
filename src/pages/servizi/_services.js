@@ -3,13 +3,7 @@ import React from "react"
 const services = [
   {
     id: 1,
-    text: () => (
-      <>
-        Consulenza
-        <br />
-        Commerciale
-      </>
-    ),
+    text: () => <>Consulenza Commerciale</>,
   },
   {
     id: 2,

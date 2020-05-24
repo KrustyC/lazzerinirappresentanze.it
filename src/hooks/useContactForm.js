@@ -67,6 +67,7 @@ export const useContactForm = () => {
 
   const formik = useFormik({
     validationSchema,
+    isInitialValid: false,
     initialValues: {
       email: "",
       name: "",

@@ -11,6 +11,7 @@ import {
   InputGroup,
   PolicyRow,
   Button,
+  Status,
 } from "./Form.styled"
 
 export const Form = () => {
@@ -20,21 +21,16 @@ export const Form = () => {
     <CenteredColumn>
       <StyledForm
         name="contact"
-        // method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={contactForm.handleSubmit}
       >
-        {success && (
-          <h3 style={{ background: "green" }}>
-            Grazie, ti risponderemo il prima possibile
-          </h3>
-        )}
+        {success && <Status>Grazie per averci contattato! Ti risponderemo il prima possibile!</Status>}
 
         {error && (
-          <h3 style={{ background: "red" }}>
-            Oops! Sembrerebbe che si sia verificato un errore. Riprova a breve
-          </h3>
+          <Status error>
+            Oops! Sembrerebbe essersi verificato un errore. Per facore, riprovare piu tardi
+          </Status>
         )}
 
         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}

@@ -86,3 +86,16 @@ export const Button = styled.button`
     opacity: 0.6;
   }
 `
+
+export const Status = styled.div`
+  border: 2px solid ${({ error }) => (error ? "#E51B18" : "#12BB0A")};
+  width: 100%;
+  height: 80px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+`

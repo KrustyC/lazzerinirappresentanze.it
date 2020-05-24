@@ -61,7 +61,7 @@ const ServiceBox = styled.div`
     height: 160px;
     background: ${theme.colors.primary};
     z-index: 100;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     display: flex;
     align-items: center;
     justify-content: ${left ? "flex-end" : "flex-start"};
@@ -75,9 +75,13 @@ const ServiceBox = styled.div`
 
     > div {
       display: flex;
-      height: auto;
+      align-items: center;
+      height: 100%;
 
       width: 56%;
+      width: 40vw;
+
+      padding: 30px 20px;
     }
   `}
 `
@@ -87,12 +91,14 @@ const Number = styled.h1`
   margin-right: 30px;
   font-size: 90px;
   font-weight: bold;
+  height: 100%;
 `
 const Text = styled.span`
   margin: 0;
   margin-top: -3px;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
+  height: 100%;
 `
 
 const Servizi = () => {
@@ -126,8 +132,6 @@ const Servizi = () => {
             </ParallaxItem>
           ))}
         </Foreground>
-
-        <h1>DIO MERDA</h1>
       </Wrapper>
     </>
   )
