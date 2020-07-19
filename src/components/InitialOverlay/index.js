@@ -21,7 +21,7 @@ const InitialOverlayContainer = styled.div`
 
 const Slogan = styled.h1`
   color: white !important;
-  font-size: 64px;
+  font-size: 50px;
   margin-top: 100px;
   text-align: center;
   max-width: ${({ theme }) => theme.sizes.desktop.centralColumn};

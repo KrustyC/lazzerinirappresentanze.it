@@ -34,8 +34,17 @@ const Info = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-
   max-width: 700px;
+
+  h1,
+  p,
+  a {
+    color: white !important;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
 `
 
 const Title = styled.h1`
@@ -55,12 +64,12 @@ const Buttons = styled.div`
 
 const Button = styled.button`
   ${({ theme }) => css`
-    width: 340px;
+    width: 270px;
     height: 80px;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 900;
     background: ${({ primary }) => (primary ? "black" : "white")};
-    color: ${({ primary }) => (primary ? "white" : theme.colors.primary)};
+    color: ${({ primary }) => (primary ? "white" : theme.colors.primary)} !important;
     border: none;
 
     &:first-of-type {
