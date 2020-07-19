@@ -31,4 +31,4 @@ ourHistory2: >-
 
   La serietà e il percorso di crescita dell’agenzia la fa diventare oggi un vero e proprio punto di riferimento per le aziende nel settore ***Food & Beverage*** nei canali della GD, DO e INGROSSO di Toscana ed Umbria.
 ---
-Ciao, questo e' un testo di prova
+Ciao, questo è un testo di prova

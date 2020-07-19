@@ -83,7 +83,7 @@ const CookieBanner = ({ onAllowCookie, onForbidCookie }) => (
     <CookieContainer>
       <InnerContainer>
         <Info>
-          <Title>La tua privacy e' importante</Title>
+          <Title>La tua privacy è importante</Title>
           <Text>
             Il nostro sito utilizza cookie di prime parti e cookie analytics per
             ottimizzare il sito. Cliccando "OK" o proseguendo la navigazione,
