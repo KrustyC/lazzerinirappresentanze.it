@@ -25,7 +25,6 @@ const IndexPage = ({ data }) => {
 
       <PageContainer>
         <CenteredColumn>
-          <h1>{title}</h1>
           <Markdown md={introduction} />
         </CenteredColumn>
 

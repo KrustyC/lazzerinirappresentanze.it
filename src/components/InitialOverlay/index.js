@@ -11,6 +11,7 @@ const InitialOverlayContainer = styled.div`
   top: 0;
   left: 0;
   bottom: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,16 +20,17 @@ const InitialOverlayContainer = styled.div`
   overflow: hidden;
 `
 
-const Slogan = styled.h1`
+const Slogan = styled.span`
   color: white !important;
   font-size: 50px;
   margin-top: 100px;
   text-align: center;
+  line-height: 70px;
   max-width: ${({ theme }) => theme.sizes.desktop.centralColumn};
 `
 
 const LogoContainer = styled.div`
-  width: 300px;
+  width: 100%;
   margin-top: 5rem;
 `
 

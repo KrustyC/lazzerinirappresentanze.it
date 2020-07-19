@@ -5,16 +5,16 @@ import Img from "gatsby-image"
 
 const StyledLogo = styled(Img)`
   margin-top: 10px;
-  width: 100px !important;
-  height: 100px !important;
+  width: 150px !important;
+  height: 150px !important;
 `
 
 const Logo = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "logo.png" }) {
+      placeholderImage: file(relativePath: { eq: "logo-all-black.png" }) {
         childImageSharp {
-          fixed(width: 200) {
+          fixed(width: 300) {
             ...GatsbyImageSharpFixed
           }
         }
