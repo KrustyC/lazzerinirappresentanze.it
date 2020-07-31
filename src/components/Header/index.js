@@ -6,9 +6,7 @@ import { navbarLinks } from "../../utils/links"
 import Logo from "./Logo"
 
 const HeaderWrapper = styled.div`
-  /* background: red; */
-  height: 110px;
-  /* background: red; */
+  height: 210px;
   margin-bottom: 1.45rem;
 `
 
@@ -21,11 +19,13 @@ const InnerHeader = styled.div`
   justify-content: space-between;
 `
 
-const LogoContainer = styled.div``
+const LogoContainer = styled(Link)`
+  text-decoration: none !important;
+`
 
 const Links = styled.div`
   display: flex;
-  padding-top: 50px;
+  padding-top: 100px;
 `
 
 const linkHighlight = css`
@@ -33,7 +33,7 @@ const linkHighlight = css`
     content: "";
     position: absolute;
     background: ${theme.colors.primary};
-    height: 150px;
+    height: 180px;
     width: 55px;
     border-radius: 25px;
     z-index: -1;
@@ -55,20 +55,20 @@ const StyledLink = styled(Link)`
 
     ::before {
       ${linkHighlight};
-      top: -180px;
+      top: -230px;
     }
 
     &.active {
       ::before {
         ${linkHighlight};
-        top: -100px;
+        top: -130px;
       }
     }
 
     :hover::before,
     :hover::before {
       ${linkHighlight};
-      top: -100px;
+      top: -130px;
     }
   `}
 `
