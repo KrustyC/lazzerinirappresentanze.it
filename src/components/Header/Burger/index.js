@@ -109,6 +109,12 @@ export const Burger = () => {
 
   const onToggle = () => setIsOpen(!isOpen)
 
+  const onDelayClose = () => {
+    setTimeout(() => {
+      setIsOpen(false)
+    }, 500)
+  }
+
   return (
     <Div>
       <NavIcon onClick={onToggle}>
@@ -128,7 +134,11 @@ export const Burger = () => {
               {navbarLinks.map(({ text, link, href }) => (
                 <Li key={text}>
                   {!!link ? (
-                    <Link activeClassName="active" link={link}>
+                    <Link
+                      activeClassName="active"
+                      to={link}
+                      onClick={onDelayClose}
+                    >
                       {text}
                     </Link>
                   ) : (
