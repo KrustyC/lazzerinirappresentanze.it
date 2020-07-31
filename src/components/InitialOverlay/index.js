@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { motion, AnimatePresence } from "framer-motion"
+import { isMobile } from "react-device-detect"
 import Logo from "./Logo"
+import LogoMobile from "./LogoMobile"
 
 const InitialOverlayContainer = styled.div`
   position: fixed;
@@ -30,6 +32,7 @@ const Slogan = styled.span`
 
   @media (max-width: 728px) {
     font-size: 30px;
+    line-height: 50px;
   }
 `
 
@@ -55,7 +58,7 @@ const InitialOverlay = ({ isVisible, onHide }) => {
             </Slogan>
 
             <LogoContainer>
-              <Logo />
+              {isMobile ? <LogoMobile /> : <Logo />}
             </LogoContainer>
           </InitialOverlayContainer>
         </motion.div>

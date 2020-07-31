@@ -44,6 +44,10 @@ const Info = styled.div`
   align-items: flex-start;
   max-width: 700px;
 
+  h1 {
+    margin-bottom: 10px;
+  }
+
   h1,
   p,
   a {
