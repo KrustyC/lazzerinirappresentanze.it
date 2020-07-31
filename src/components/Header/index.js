@@ -10,10 +10,6 @@ import { Burger } from "./Burger"
 const HeaderWrapper = styled.div`
   height: 210px;
   margin-bottom: 1.45rem;
-
-  @media (max-width: 728px) {
-    /* display: none; */
-  }
 `
 
 const InnerHeader = styled.div`
@@ -21,7 +17,6 @@ const InnerHeader = styled.div`
   width: 80vw;
 
   display: flex;
-  /* align-items: space-between; */
   justify-content: space-between;
 `
 
@@ -32,6 +27,11 @@ const LogoContainer = styled(Link)`
 const Links = styled.div`
   display: flex;
   padding-top: 100px;
+`
+
+const BurgerContainer = styled.div`
+  display: flex;
+  padding-top: 29px;
 `
 
 const linkHighlight = css`
@@ -86,19 +86,19 @@ const Header = () => (
         <Logo />
       </LogoContainer>
 
-      <Links>
-        {isMobile ? (
-          <Links>
-            <Burger />
-          </Links>
-        ) : (
-          navbarLinks.map(({ text, link }) => (
+      {isMobile ? (
+        <BurgerContainer>
+          <Burger />
+        </BurgerContainer>
+      ) : (
+        <Links>
+          {navbarLinks.map(({ text, link }) => (
             <StyledLink activeClassName="active" key={text} to={link}>
               {text}
             </StyledLink>
-          ))
-        )}
-      </Links>
+          ))}
+        </Links>
+      )}
     </InnerHeader>
   </HeaderWrapper>
 )
