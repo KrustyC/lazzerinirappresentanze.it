@@ -29,6 +29,7 @@
     "node-mailjet": "^3.3.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-device-detect": "^1.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "react-markdown": "^4.3.1",

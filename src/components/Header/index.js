@@ -2,15 +2,17 @@ import React from "react"
 import { Link } from "gatsby"
 import styled, { css } from "styled-components"
 import PropTypes from "prop-types"
+import { isMobile } from "react-device-detect"
 import { navbarLinks } from "../../utils/links"
 import Logo from "./Logo"
+import { Burger } from "./Burger"
 
 const HeaderWrapper = styled.div`
   height: 210px;
   margin-bottom: 1.45rem;
 
   @media (max-width: 728px) {
-    display: none;
+    /* display: none; */
   }
 `
 
@@ -77,18 +79,25 @@ const StyledLink = styled(Link)`
   `}
 `
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <HeaderWrapper>
     <InnerHeader>
       <LogoContainer>
         <Logo />
       </LogoContainer>
+
       <Links>
-        {navbarLinks.map(({ text, link }) => (
-          <StyledLink activeClassName="active" key={text} to={link}>
-            {text}
-          </StyledLink>
-        ))}
+        {isMobile ? (
+          <Links>
+            <Burger />
+          </Links>
+        ) : (
+          navbarLinks.map(({ text, link }) => (
+            <StyledLink activeClassName="active" key={text} to={link}>
+              {text}
+            </StyledLink>
+          ))
+        )}
       </Links>
     </InnerHeader>
   </HeaderWrapper>

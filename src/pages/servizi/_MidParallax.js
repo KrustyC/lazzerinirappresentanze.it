@@ -16,7 +16,7 @@ const StyledImaged = styled(BackgroundImage)`
 export const MidParallax = () => {
   const data = useStaticQuery(graphql`
     query {
-      desktop: file(relativePath: { eq: "bread.jpg" }) {
+      desktop: file(relativePath: { eq: "coffe.jpg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
