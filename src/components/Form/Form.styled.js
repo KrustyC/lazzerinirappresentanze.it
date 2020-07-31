@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components"
 
-export const StyledForm = styled.form``
+export const StyledForm = styled.form`
+  margin-bottom: 100px;
+`
 
 export const Row = styled.div`
   display: flex;
@@ -9,6 +11,14 @@ export const Row = styled.div`
 
   > div:first-of-type {
     margin-right: 50px;
+  }
+
+  @media (max-width: 728px) {
+    flex-direction: column;
+
+    > div {
+      margin-right: 0 !important;
+    }
   }
 `
 
@@ -39,6 +49,7 @@ export const Textarea = styled.textarea`
     border: 2px solid ${theme.colors.primary};
     border-radius: 20px;
     width: 100%;
+    height: 350px;
     resize: none;
 
     padding-top: 10px;
@@ -57,6 +68,10 @@ export const BottomRow = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 728px) {
+    flex-direction: column;
+  }
 `
 
 export const PolicyRow = styled.div`
@@ -84,6 +99,11 @@ export const Button = styled.button`
 
   :disabled {
     opacity: 0.6;
+  }
+
+  @media (max-width: 728px) {
+    margin-top: 30px;
+    width: 100%;
   }
 `
 

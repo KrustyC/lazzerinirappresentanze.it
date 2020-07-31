@@ -5,11 +5,25 @@ import { CenteredColumn } from "../CenteredColumn"
 const Container = styled(CenteredColumn)`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 728px) {
+    flex-direction: column;
+  }
 `
 
 const Info = styled.div`
   display: flex;
   flex-direction: column;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 728px) {
+    &:first-of-type {
+      margin-bottom: 50px;
+    }
+  }
 `
 
 export const OfficeInfo = () => (

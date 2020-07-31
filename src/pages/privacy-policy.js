@@ -2,11 +2,26 @@ import React from "react"
 import styled from "styled-components"
 import { CenteredColumn } from "../components/CenteredColumn"
 
-const Title = styled.h1``
-const SectionTitle = styled.h1``
+const Title = styled.h1`
+  @media (max-width: 728px) {
+    font-size: 28px;
+  }
+`
+const SectionTitle = styled.h1`
+  @media (max-width: 728px) {
+    font-size: 28px;
+  }
+`
+
 const Ul = styled.ul``
+
 const Li = styled.li``
-const P = styled.p``
+
+const P = styled.p`
+  @media (max-width: 728px) {
+    font-size: 16px;
+  }
+`
 
 const PrivacyPolicy = () => (
   <CenteredColumn css="margin-bottom: 100px;">

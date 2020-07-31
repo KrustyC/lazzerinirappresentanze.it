@@ -14,6 +14,10 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 728px) {
+    min-height: 2850px;
+  }
 `
 
 const Background = styled.div`
@@ -53,6 +57,11 @@ const FirstBox = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  @media (max-width: 728px) {
+    height: 400px;
+    width: 100vw;
+  }
 `
 
 const ServiceBox = styled.div`
@@ -83,6 +92,20 @@ const ServiceBox = styled.div`
 
       padding: 30px 20px;
     }
+
+    @media (max-width: 728px) {
+      height: 200px;
+      width: 100vw;
+
+      > div {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        height: 100%;
+        width: 100vw;
+        padding: 30px 20px;
+      }
+    }
   `}
 `
 
@@ -92,13 +115,24 @@ const Number = styled.h1`
   font-size: 90px;
   font-weight: bold;
   height: 100%;
+
+  @media (max-width: 728px) {
+    font-size: 50px;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 `
 const Text = styled.span`
   margin: 0;
   margin-top: -3px;
   font-weight: bold;
   font-size: 20px;
-  height: 100%;
+
+  @media (max-width: 728px) {
+    height: auto;
+    font-size: 16px;
+    margin-left: 25px;
+  }
 `
 
 const Servizi = () => {

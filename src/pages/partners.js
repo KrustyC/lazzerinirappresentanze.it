@@ -13,6 +13,14 @@ const PartnersGrid = styled.div`
   grid-row-gap: 30px;
   width: 80vw;
   margin: 100px auto;
+
+  @media (max-width: 980px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 728px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 
 const PartnerLink = styled.a`
