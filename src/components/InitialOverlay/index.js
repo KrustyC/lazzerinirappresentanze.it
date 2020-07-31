@@ -27,6 +27,10 @@ const Slogan = styled.span`
   text-align: center;
   line-height: 70px;
   max-width: ${({ theme }) => theme.sizes.desktop.centralColumn};
+
+  @media (max-width: 728px) {
+    font-size: 30px;
+  }
 `
 
 const LogoContainer = styled.div`
