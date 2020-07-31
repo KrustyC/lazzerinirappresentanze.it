@@ -8,6 +8,10 @@ import Logo from "./Logo"
 const HeaderWrapper = styled.div`
   height: 210px;
   margin-bottom: 1.45rem;
+
+  @media (max-width: 728px) {
+    display: none;
+  }
 `
 
 const InnerHeader = styled.div`

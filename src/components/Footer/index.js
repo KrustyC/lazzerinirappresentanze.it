@@ -11,6 +11,10 @@ const FooterWrapper = styled.footer`
   background: black;
   color: white;
   padding: 4rem 5rem;
+
+  @media (max-width: 728px) {
+    padding: 2.5rem;
+  }
 `
 
 const InnerFooter = styled.div`
@@ -22,6 +26,14 @@ const InnerFooter = styled.div`
   > div {
     padding: 0 2rem;
     height: 100%;
+  }
+
+  @media (max-width: 728px) {
+    flex-direction: column;
+    > div {
+      padding: 2rem 0;
+      width: 100%;
+    }
   }
 `
 
@@ -38,8 +50,17 @@ const Center = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
   border-left: 1px solid white;
   border-right: 1px solid white;
+
+  @media (max-width: 728px) {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+
+    border-left: none;
+    border-right: none;
+  }
 `
 
 const StyledLink = styled(Link)`
@@ -81,8 +102,6 @@ const IconContainer = styled.a`
 `
 
 const Layout = () => {
-  // const currentYear = new Date().getFullYear()
-
   return (
     <FooterWrapper>
       <InnerFooter>
@@ -119,13 +138,6 @@ const Layout = () => {
             <LinkedInLogo />
           </IconContainer>
         </Right>
-        {/* © {currentYear} Lazzerini Rappresentanze
-        <br />
-        <div>
-          Designed and built by{" "}
-          <a href="https://beatricecox.com">Beatrice Cox</a> and{" "}
-          <a href="https://dcrestini.me">Davide Crestini</a>
-        </div> */}
         {/* <Link to="/privacy-policy">Privacy Policy</Link> */}
       </InnerFooter>
     </FooterWrapper>

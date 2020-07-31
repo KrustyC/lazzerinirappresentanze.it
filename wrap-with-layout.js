@@ -6,6 +6,11 @@ const GlobalStyle = createGlobalStyle`
   * {
     color: ${({ theme }) => theme.colors.text} !important;
   }
+
+  body {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 `
 
 const theme = {

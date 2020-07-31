@@ -6,6 +6,11 @@ const EmployeesContainer = styled.div`
   justify-content: center;
   width: 90vw;
   margin: 100px auto;
+
+  @media (max-width: 728px) {
+    flex-direction: column;
+    margin: 50px auto;
+  }
 `
 
 const Employee = styled.div`
@@ -13,11 +18,21 @@ const Employee = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 728px) {
+    &:not(:last-of-type) {
+      margin-bottom: 50px;
+    }
+  }
 `
 
 const EmployeeContainer = styled.div`
   font-size: 24px;
   font-weight: bold;
+
+  @media (max-width: 728px) {
+    width: 180px;
+  }
 `
 
 const EmployeePicContainer = styled.div`
@@ -28,6 +43,11 @@ const EmployeePicContainer = styled.div`
 
     :hover {
       box-shadow: 0px 0px 0px 6px ${theme.colors.primary};
+    }
+
+    @media (max-width: 728px) {
+      width: 180px;
+      height: 180px;
     }
   `}
 `

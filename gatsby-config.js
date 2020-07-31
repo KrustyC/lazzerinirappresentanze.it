@@ -74,10 +74,10 @@ module.exports = {
         name: `Lazzerini Rappresentanze`,
         short_name: `lazzerini`,
         start_url: `/`,
-        background_color: `#24E16E`,
-        theme_color: `#24E16E`,
+        background_color: `#EE9A21`,
+        theme_color: `#EE9A21`,
         display: `minimal-ui`,
-        icon: `src/images/logo-short-b.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo-all-coloured.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -84,8 +84,6 @@ const MapComponent = ({ google }) => {
   )
 }
 
-console.log(process.env.GATSBY_GOOGLE_MAPS_API_KEY)
-
 export const Map = GoogleApiWrapper({
   apiKey: process.env.GATSBY_GOOGLE_MAPS_API_KEY,
   LoadingContainer: Loader,

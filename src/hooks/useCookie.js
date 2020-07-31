@@ -16,6 +16,7 @@ function useCookie(cookieName, path) {
 
   useEffect(() => {
     const cookie = localStorage.getItem(cookieName)
+    console.log(cookie)
     if (!cookie) {
       setShowCookieBanner(true)
     }
@@ -35,6 +36,7 @@ function useCookie(cookieName, path) {
     }
   }, [path])
 
+  console.log(showCookieBanner)
   return [showCookieBanner, allowCookie, forbidCookie]
 }
 

@@ -9,11 +9,16 @@ import SEO from "../components/seo"
 
 const PageContainer = styled.div`
   margin-bottom: 100px;
+
+  h1 {
+    @media (max-width: 728px) {
+      font-size: 28px;
+    }
+  }
 `
 
 const IndexPage = ({ data }) => {
   const {
-    title,
     introduction,
     ourHistory1,
     ourHistory2,
