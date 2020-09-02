@@ -1,5 +1,5 @@
 ---
-name: John Doe
-job: Sales Manager
-picture: /img/tipo1.jpg
+name: Luca Lazzerini
+job: Socio Agenzia, Sales Manager
+picture: /img/ll2.jpg
 ---
