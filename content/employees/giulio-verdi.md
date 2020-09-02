@@ -1,5 +1,5 @@
 ---
-name: Giulio Verdi
-job: Sales Manager
-picture: /img/top2.jpg
+name: Daniele Lazzerini
+job: Socio Agenzia, Sales Manager
+picture: /img/dl.jpg
 ---
