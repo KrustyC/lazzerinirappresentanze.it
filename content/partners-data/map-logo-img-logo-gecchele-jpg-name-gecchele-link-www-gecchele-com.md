@@ -1,5 +1,5 @@
 ---
 name: Gecchele
-link: www.gecchele.com
+link: https://www.gecchele.com/en/
 logo: /img/logo-gecchele.jpg
 ---
