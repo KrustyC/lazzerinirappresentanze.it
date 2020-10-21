@@ -1,5 +1,5 @@
 ---
 name: Miele Vangelisti
-link: www.mielevangelisti.it
+link: http://www.mielevangelisti.it/it/index.php
 logo: /img/miele-vangelisti.png
 ---
