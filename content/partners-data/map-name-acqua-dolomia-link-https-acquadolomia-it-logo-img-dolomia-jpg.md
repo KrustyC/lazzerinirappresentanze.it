@@ -1,5 +1,5 @@
 ---
-name: Acqua Dolomia
-link: https://acquadolomia.it/
-logo: /img/dolomia.jpg
+name: Riso Vignola
+link: http://www.risovignola.it/it/
+logo: /img/vignola.png
 ---
