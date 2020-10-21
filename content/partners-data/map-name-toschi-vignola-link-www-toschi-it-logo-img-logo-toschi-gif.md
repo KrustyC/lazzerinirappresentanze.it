@@ -1,5 +1,5 @@
 ---
 name: Toschi Vignola
-link: www.toschi.it
+link: http://www.toschi.it/
 logo: /img/logo-toschi.gif
 ---
