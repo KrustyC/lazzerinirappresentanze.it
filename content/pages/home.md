@@ -14,8 +14,8 @@ ourHistory1: >-
 ourHistory2: >-
   Era Settembre 2007, quando mosso da un’idea che lo perseguitava ormai da anni
   decide di riprendere l’attività di Agente di commercio rivolgendosi alla
-  clientela della GD/DO e INGROSSO delle regioniToscana ed Umbria, acquisendo il
-  primo mandato con Antica Dolciaria Perugina.
+  clientela della GD/DO e INGROSSO delle regioni Toscana ed Umbria, acquisendo
+  il primo mandato con Antica Dolciaria Perugina.
 
 
   Negli anni successivi i grandi stimoli lo portarono ad acquisire altri numerosi mandati come Oleificio Ranieri, Cantina il Greppo, Terre de Trinci, Toschi e B&G. Nel 2012, dopo un’esperienza pluriennale con l’azienda Perfetti Van Melle entra a far parte dell’agenzia anche il figlio Luca, dotato di grande voglia e ambizione nel portare avanti la tradizione di famiglia. Nel frattempo altre aziende come Cantine di Tufo, Fumaiolo, Lavis, Apicoltura Vangelisti e Il Fornaio del Casale si aggiungono al pacchetto costituendo così la “***Lazzerini Rappresentanze SRL***”.
