@@ -1,5 +1,5 @@
 ---
-name: Colli Euganei
-link: https://www.cantinacollieuganei.it/
-logo: /img/cantina-colli-euganei.jpg
+name: Acqua Dolomia
+link: https://acquadolomia.it/
+logo: /img/dolomia.jpg
 ---
