@@ -59,7 +59,7 @@ const EmployeePic = styled.div`
     border-radius: 10px;
     background-size: cover;
     background-image: url(${urlSrc});
-    background-position: 50% 50%;
+    background-position: center top;
     filter: grayscale(100%);
   `}
 `
