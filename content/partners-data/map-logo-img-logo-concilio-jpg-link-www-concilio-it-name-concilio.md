@@ -1,5 +1,5 @@
 ---
 name: Concilio
-link: www.concilio.it
+link: https://www.concilio.it/it/
 logo: /img/logo-concilio.jpg
 ---
