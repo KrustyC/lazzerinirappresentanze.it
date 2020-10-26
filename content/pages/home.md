@@ -2,7 +2,8 @@
 title: Chi Siamo
 slogan: Lazzerini Rappresentanze SLogan
 introduction: |-
-  Nulla uccide una vendita più velocemente della mancanza di entusiasmo.\
+  Nulla uccide una vendita più velocemente della mancanza di entusiasmo
+
   (Brian Tracy)
 ourHistory1: >-
   
