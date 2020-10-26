@@ -1,9 +1,9 @@
 ---
 title: Chi Siamo
 slogan: Lazzerini Rappresentanze SLogan
-introduction: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec
-  neque ex. Ut venenatis nulla eget molestie eleifend. Fusce et ante in nibh
-  pellentesque scelerisque non sit amet urna.
+introduction: |-
+  Nulla uccide una vendita più velocemente della mancanza di entusiasmo.\
+  (Brian Tracy)
 ourHistory1: >-
   
 
