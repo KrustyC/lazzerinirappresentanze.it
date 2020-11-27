@@ -1,5 +1,5 @@
 ---
 name: Luca Lazzerini
-job: Socio Agenzia, Sales Manager
+job: Sales Manager
 picture: /img/ll4.jpg
 ---
