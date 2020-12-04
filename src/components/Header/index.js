@@ -18,15 +18,17 @@ const InnerHeader = styled.div`
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 
 const LogoContainer = styled(Link)`
   text-decoration: none !important;
+  padding-top: 20px;
 `
 
 const Links = styled.div`
   display: flex;
-  padding-top: 100px;
+  padding-top: 40px;
 `
 
 const BurgerContainer = styled.div`

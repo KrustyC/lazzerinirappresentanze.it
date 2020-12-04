@@ -69,12 +69,11 @@ const ServiceBox = styled.div`
     width: 70vw;
     height: 160px;
     background: ${theme.colors.primary};
+    opacity: 0.9;
     z-index: 100;
-    /* padding: 0 20px; */
     display: flex;
     align-items: center;
     justify-content: ${left ? "flex-end" : "flex-start"};
-    box-shadow: ${`${left ? "" : "-"}6px`} 7px 6px -2px rgba(0, 0, 0, 0.5);
 
     margin-top: 70px;
 

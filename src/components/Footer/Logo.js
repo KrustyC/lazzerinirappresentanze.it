@@ -10,7 +10,7 @@ const StyledLogo = styled(Img)`
 const Logo = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "logo-all-white.png" }) {
+      placeholderImage: file(relativePath: { eq: "visual_identity_bcolour_white_stage02.png" }) {
         childImageSharp {
           fixed(width: 200) {
             ...GatsbyImageSharpFixed
