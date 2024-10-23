@@ -1,5 +1,5 @@
 ---
 name: Cristina Montalto
-job: Sales Agent
-picture: /img/cristina-montalto-2.jpg
+job: Sales Manager
+picture: /img/cristina-montalto-3.jpg
 ---
