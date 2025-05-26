@@ -1,5 +1,5 @@
 ---
-name: Maria Rossi
+name: Silvia Ghignoni
 job: Assistant Sales Manager
-picture: /img/tipa.jpg
+picture: /img/foto-silvia-ghignoni.png
 ---
