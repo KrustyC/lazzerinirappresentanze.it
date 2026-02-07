@@ -6,6 +6,7 @@
   "author": "Davide Crestini <davide.crestini94@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
+    "esbuild": "^0.27.3",
     "formik": "^2.1.4",
     "framer-motion": "^1.11.0",
     "gatsby": "^2.24.84",
@@ -61,7 +62,7 @@
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
-   "engines": {
+  "engines": {
     "node": ">=16.0.0",
     "npm": ">=7.0.0"
   }
