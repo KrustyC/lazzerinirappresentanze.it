@@ -1,5 +1,5 @@
 ---
-name: Acqua Dolomia
-link: https://acquadolomia.it/
-logo: /img/dolomia.jpg
+name: Toso Spa
+link: https://toso.it
+logo: /img/toso-spa.png
 ---
