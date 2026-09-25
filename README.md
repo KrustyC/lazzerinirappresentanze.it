@@ -8,7 +8,7 @@ Lazzerini Rappresentanze.
 - **Next.js 16** (App Router, Cache Components, Partial Prefetching, React Compiler)
 - **Tailwind CSS 4**
 - **Sanity** — schema, embedded Studio at `/studio`, Presentation tool, Sanity Live
-- **Vercel** hosting, **Sentry** error monitoring (inert until configured)
+- **Vercel** hosting, Web Analytics and Speed Insights; **Sentry** error monitoring (inert until configured)
 - **bun** for everything; **oxlint** / **oxfmt**; **Vitest** + **Playwright**
 
 ## Getting started

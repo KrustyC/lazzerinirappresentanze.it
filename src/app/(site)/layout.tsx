@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { VisualEditing } from "next-sanity/visual-editing";
 import { draftMode } from "next/headers";
 
@@ -16,6 +18,11 @@ import { SanityLive } from "@/lib/sanity/live";
 /**
  * Everything the public site shares and the embedded Studio must not:
  * chrome, consent, tracking and Sanity Live.
+ *
+ * Vercel Analytics and Speed Insights sit outside the consent gate on
+ * purpose: they set no cookie and store nothing on the device, so the rule
+ * the banner implements does not reach them. See
+ * docs/runbooks/consent-and-tracking.md.
  */
 export default async function SiteLayout({
   children,
@@ -51,6 +58,9 @@ export default async function SiteLayout({
       {/* On every request, not only in draft mode: this is what revalidates
           the `use cache` entries when content is published. */}
       {isSanityConfigured && <SanityLive includeDrafts={isDraftMode} />}
+
+      <Analytics />
+      <SpeedInsights />
 
       {isDraftMode && (
         <>

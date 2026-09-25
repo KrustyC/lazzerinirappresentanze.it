@@ -28,7 +28,9 @@ nobody, and an enforcing policy without nonces still needs
   `*.apicdn.sanity.io` (content, Live, Studio auth),
   `www.googletagmanager.com`, `*.google-analytics.com`,
   `*.analytics.google.com` (once GTM is on), the Sentry ingest host (or the
-  `/monitoring` tunnel, same-origin). `next/font` self-hosts.
+  `/monitoring` tunnel, same-origin). Vercel Analytics and Speed Insights are
+same-origin in production (`/_vercel/*`); only `next dev` loads their debug
+scripts from `va.vercel-scripts.com`. `next/font` self-hosts.
 
 If the Studio ever moves to its own origin, `X-Frame-Options` must go (it has
 no multi-origin form) in favour of CSP `frame-ancestors`.

@@ -17,8 +17,19 @@
 | Tag Manager | **Not loaded** — `NEXT_PUBLIC_GTM_ID` unset, `SiteAnalytics` renders nothing |
 | Page view / scroll / link-click trackers | Not mounted (inside `SiteAnalytics`) |
 | Contact form events | Pushed to `window.dataLayer`, read by nothing |
+| Vercel Web Analytics + Speed Insights | **Live** — mounted in `(site)/layout.tsx`, outside the consent gate |
 
 Nothing sets a non-technical cookie, which is why the banner can be off.
+
+**Why Vercel's two are not behind consent:** they set no cookie and use no
+`localStorage`; a visitor is recognised only by a hash of the request that
+rotates daily, and the raw IP is not stored. The ePrivacy/Garante consent rule
+is about storing or reading data *on the device*, which they do not do. They
+still process personal data (the IP, in transit), so they belong in the
+privacy policy as a processor — see `privacy-policy.md` — just not in the
+banner. Never gate them by not rendering them when the banner comes back.
+Both need enabling once in the Vercel dashboard (project → Analytics /
+Speed Insights → Enable); until then the script loads and sends nothing.
 
 ## Enabling the cookie banner
 

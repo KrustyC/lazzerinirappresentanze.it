@@ -48,9 +48,11 @@ It is the Gatsby site's text, carried over word for word:
    For this site, roughly:
    - answering the contact form — pre-contractual measures / legitimate interest;
    - server logs and security — legitimate interest;
+   - Vercel Web Analytics and Speed Insights (cookieless, already live) —
+     legitimate interest; say they set no cookies;
    - analytics and marketing cookies — consent (only once the banner is live).
 3. Recipients / categories of recipients — the processors, e.g. Vercel
-   (hosting), Sanity (only if it stores personal data), the email provider,
+   (hosting, Web Analytics, Speed Insights), Sanity (only if it stores personal data), the email provider,
    Google (GTM/GA4), Sentry.
 4. **Transfers outside the EU** and the safeguard used (most of the above are
    US companies: EU-US Data Privacy Framework or standard contractual clauses).
