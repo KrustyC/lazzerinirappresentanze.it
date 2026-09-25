@@ -1,69 +1,77 @@
 {
   "name": "lazzerinirappresentanze.it",
   "private": true,
+  "version": "1.0.0",
   "description": "Website for https://lazzerinirappresentanze.it",
-  "version": "0.1.0",
   "author": "Davide Crestini <davide.crestini94@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "bun": ">=1.3.0 <2",
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format:check": "oxfmt --check src",
+    "format": "oxfmt src",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "verify": "bun run lint && bun run format:check && bun run typecheck",
+    "test": "vitest",
+    "test:e2e": "playwright test",
+    "typegen": "sanity schema extract --force && sanity typegen generate",
+    "sanity:seed": "bun scripts/seed-sanity.ts",
+    "update-packages": "bun scripts/update-packages.ts",
+    "skills:update": "skills update"
+  },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.7",
-    "esbuild": "^0.27.3",
-    "formik": "^2.1.4",
-    "framer-motion": "^1.11.0",
-    "gatsby": "^2.24.84",
-    "gatsby-background-image": "^1.1.1",
-    "gatsby-image": "^2.3.4",
-    "gatsby-plugin-gdpr-cookies": "^1.0.7",
-    "gatsby-plugin-manifest": "^2.3.5",
-    "gatsby-plugin-netlify-cms": "^4.2.4",
-    "gatsby-plugin-offline": "^3.1.4",
-    "gatsby-plugin-portal": "^1.0.7",
-    "gatsby-plugin-react-helmet": "^3.2.4",
-    "gatsby-plugin-remove-trailing-slashes": "^2.3.2",
-    "gatsby-plugin-sharp": "^2.6.43",
-    "gatsby-plugin-styled-components": "^3.2.4",
-    "gatsby-plugin-typography": "^2.4.4",
-    "gatsby-source-filesystem": "^2.2.4",
-    "gatsby-transformer-remark": "^2.7.4",
-    "gatsby-transformer-sharp": "^2.4.6",
-    "google-maps-react": "^2.0.6",
-    "netlify-cms-app": "^2.12.11",
-    "node-mailjet": "^3.3.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-device-detect": "^1.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.0.0",
-    "react-markdown": "^4.3.1",
-    "react-typography": "^0.16.19",
-    "styled-components": "^5.1.0",
-    "typography": "^0.16.19",
-    "yup": "^0.28.5"
+    "@sanity/client": "8.7.0",
+    "@sanity/image-url": "2.1.1",
+    "@sanity/vision": "6.16.0",
+    "@sentry/nextjs": "11.0.0",
+    "babel-plugin-react-compiler": "1.0.0",
+    "clsx": "2.1.1",
+    "next": "16.3.6",
+    "next-sanity": "13.3.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sanity": "6.16.0",
+    "styled-components": "6.5.3",
+    "tailwind-merge": "3.7.0",
+    "zod": "4.6.5"
+  },
+  "resolutions": {
+    "@sanity/client": "8.7.0",
+    "@sanity/visual-editing": "6.1.2"
   },
   "devDependencies": {
-    "prettier": "2.0.4"
+    "@babel/core": "7.29.7",
+    "@playwright/test": "1.63.0",
+    "@rolldown/plugin-babel": "0.2.4",
+    "@sanity/webhook": "4.0.4",
+    "@tailwindcss/postcss": "4.3.3",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.7",
+    "@types/node": "26.6.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "agent-browser": "0.38.1",
+    "jsdom": "30.1.1",
+    "oxfmt": "0.70.0",
+    "oxlint": "1.85.0",
+    "skills": "1.7.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2",
+    "vitest": "5.0.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=7.0.0"
-  }
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@sentry/cli",
+    "@swc/core",
+    "agent-browser"
+  ]
 }

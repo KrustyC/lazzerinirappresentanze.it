@@ -1,0 +1,80 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "typescript",
+    "unicorn",
+    "oxc",
+    "react",
+    "react-perf",
+    "jsx-a11y",
+    "import",
+    "nextjs",
+    "promise",
+    "vitest"
+  ],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "ignorePatterns": ["node_modules", ".next", "dist", "scripts"],
+  "rules": {
+    "react/no-array-index-key": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/no-unassigned-import": "off",
+    "no-underscore-dangle": "off",
+    "promise/always-return": ["warn", { "ignoreLastCallback": true }],
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "react",
+            "importNames": ["useCallback", "useMemo", "memo"],
+            "message": "React Compiler handles memoization; for create-once values use useState(() => …)."
+          }
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.{jsx,tsx}"],
+      "rules": {
+        "no-console": "warn"
+      }
+    },
+    {
+      "files": ["src/lib/sanity/types.ts"],
+      "rules": {
+        "typescript/no-explicit-any": "off"
+      }
+    },
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "func-style": ["error", "expression"]
+      }
+    },
+    {
+      "files": [
+        "src/app/**/page.tsx",
+        "src/app/**/layout.tsx",
+        "src/app/**/not-found.tsx",
+        "src/app/**/error.tsx",
+        "src/app/**/global-error.tsx",
+        "src/app/**/opengraph-image.tsx",
+        "src/app/**/icon.tsx",
+        "src/app/**/apple-icon.tsx"
+      ],
+      "rules": {
+        "func-style": "off"
+      }
+    },
+    {
+      "files": ["**/__tests__/**", "**/*.test.tsx", "src/test/**", "e2e/**"],
+      "rules": {
+        "func-style": "off"
+      }
+    }
+  ]
+}

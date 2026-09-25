@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/*
+ * Brand tokens carried over from the Gatsby theme. The redesign replaces
+ * these; everything else uses Tailwind's defaults on purpose.
+ */
+@theme {
+  --color-primary: #2782c5;
+  --color-ink: #5a5a5a;
+  --font-sans: var(--font-league-spartan), Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  /* Scoped to the site wrapper in (site)/layout.tsx so none of it reaches
+     the embedded Studio, which shares the root layout. */
+  .site-root {
+    @apply text-ink font-sans text-lg leading-relaxed antialiased;
+  }
+
+  .site-root :is(h1, h2, h3) {
+    @apply font-bold;
+  }
+}
+
+/* The fixed-background parallax bands. iOS Safari ignores
+   background-attachment: fixed, so it falls back to a plain cover image. */
+.parallax-band {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .parallax-band {
+    background-attachment: scroll;
+  }
+}

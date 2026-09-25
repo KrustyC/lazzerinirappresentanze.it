@@ -1,0 +1,29 @@
+---
+description: Reusable React component conventions for this project
+globs: src/**/*.tsx
+alwaysApply: false
+---
+
+# React Component Conventions
+
+Apply this rule to reusable React components in this repo.
+
+- Define props as `interface <ComponentName>Props`.
+- Export reusable components as named `const` values.
+- Prefer `React.FC<Props>` for reusable components.
+- Prefer one component per file.
+- Do not use default exports for reusable components.
+
+Preferred pattern:
+
+```tsx
+interface MyComponentProps {
+  prop1: string;
+}
+
+export const MyComponent: React.FC<MyComponentProps> = ({ prop1 }) => {
+  return <div>{prop1}</div>;
+};
+```
+
+Do not force this pattern onto framework files that require special exports, including `page.tsx`, `layout.tsx`, `loading.tsx`, `error.tsx`, `not-found.tsx`, `template.tsx`, `default.tsx`, and route handlers.
