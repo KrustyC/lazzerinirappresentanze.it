@@ -1,9 +1,9 @@
 "use client";
 
 import { useActionState } from "react";
-import Link from "next/link";
 
 import { submitContactForm } from "@/actions/submitContactForm";
+import { AppLink } from "@/components/AppLink";
 import { CenteredColumn } from "@/components/CenteredColumn";
 import { EVENTS, onceOnThisPage, trackEvent } from "@/lib/analytics/analytics";
 import {
@@ -119,9 +119,9 @@ export const ContactForm: React.FC = () => {
               />
               <span>
                 Confermo di aver preso visione dell&apos;
-                <Link href="/privacy-policy" className="underline">
+                <AppLink href="/privacy-policy" className="underline">
                   informativa sul trattamento dei dati
-                </Link>
+                </AppLink>
               </span>
             </label>
             {errors.policy && (

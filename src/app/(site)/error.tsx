@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 import * as Sentry from "@sentry/nextjs";
-import Link from "next/link";
 
+import { AppLink } from "@/components/AppLink";
 import { CenteredColumn } from "@/components/CenteredColumn";
 
 interface ErrorPageProps {
@@ -35,9 +35,9 @@ export default function ErrorPage({ error, retry }: ErrorPageProps) {
         >
           Riprova
         </button>
-        <Link href="/" className="text-primary font-bold underline">
+        <AppLink href="/" className="text-primary font-bold underline">
           Torna alla home
-        </Link>
+        </AppLink>
       </div>
     </CenteredColumn>
   );

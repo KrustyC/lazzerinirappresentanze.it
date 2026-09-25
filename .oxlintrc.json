@@ -22,7 +22,12 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unassigned-import": "off",
     "no-underscore-dangle": "off",
-    "promise/always-return": ["warn", { "ignoreLastCallback": true }],
+    "promise/always-return": [
+      "warn",
+      {
+        "ignoreLastCallback": true
+      }
+    ],
     "no-restricted-imports": [
       "error",
       {
@@ -31,6 +36,10 @@
             "name": "react",
             "importNames": ["useCallback", "useMemo", "memo"],
             "message": "React Compiler handles memoization; for create-once values use useState(() => …)."
+          },
+          {
+            "name": "next/link",
+            "message": "Use AppLink from @/components/AppLink (prefetching is disabled site-wide)."
           }
         ]
       }

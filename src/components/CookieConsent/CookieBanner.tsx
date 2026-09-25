@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { AppLink } from "@/components/AppLink";
 
 import { ConsentButton } from "./ConsentButton";
 import { useCookieConsent } from "./useCookieConsent";
@@ -32,12 +32,12 @@ export const CookieBanner: React.FC = () => {
             Utilizziamo cookie tecnici e, solo con il tuo consenso, cookie di
             analisi e di marketing. Puoi accettarli tutti, rifiutarli tutti o
             scegliere quali consentire da «Personalizza».{" "}
-            <Link
+            <AppLink
               href="/privacy-policy#cookies"
               className="font-bold underline"
             >
               Maggiori informazioni
-            </Link>
+            </AppLink>
           </p>
         </div>
 

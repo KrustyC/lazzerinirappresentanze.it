@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 
+import { AppLink } from "@/components/AppLink";
 import { CookieSettingsButton } from "@/components/CookieConsent/CookieSettingsButton";
 import { FOOTER_LINKS, SITE } from "@/lib/site";
 
@@ -22,13 +22,13 @@ export const Footer: React.FC = () => (
         className="flex w-full flex-5 flex-col gap-4 border-y border-white py-8 md:border-x md:border-y-0 md:px-8 md:py-0"
       >
         {FOOTER_LINKS.map(({ text, href }) => (
-          <Link
+          <AppLink
             key={href}
             href={href}
             className="hover:text-primary text-base font-bold text-white uppercase"
           >
             {text}
-          </Link>
+          </AppLink>
         ))}
         <CookieSettingsButton className="hover:text-primary cursor-pointer text-left text-base font-bold text-white uppercase" />
       </nav>

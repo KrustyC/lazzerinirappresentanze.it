@@ -14,7 +14,6 @@ function toHeaderList(headers: Record<string, string>) {
 const nextConfig: NextConfig = {
   cacheComponents: true,
   cacheLife: { default: sanity },
-  partialPrefetching: true,
   typedRoutes: true,
   reactCompiler: true,
 

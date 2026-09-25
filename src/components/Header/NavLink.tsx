@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { AppLink } from "@/components/AppLink";
 import { classNames } from "@/lib/utils/classNames";
 
 interface NavLinkProps {
@@ -21,7 +21,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
   const isActive = usePathname() === href;
 
   return (
-    <Link
+    <AppLink
       href={href}
       onNavigate={onNavigate}
       aria-current={isActive ? "page" : undefined}
@@ -31,6 +31,6 @@ export const NavLink: React.FC<NavLinkProps> = ({
       )}
     >
       {children}
-    </Link>
+    </AppLink>
   );
 };

@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import { AppLink } from "@/components/AppLink";
 import { CenteredColumn } from "@/components/CenteredColumn";
 
 export default function NotFound() {
@@ -9,9 +8,9 @@ export default function NotFound() {
       <p className="mb-6">
         La pagina che cercavi non esiste o è stata spostata.
       </p>
-      <Link href="/" className="text-primary font-bold underline">
+      <AppLink href="/" className="text-primary font-bold underline">
         Torna alla home
-      </Link>
+      </AppLink>
     </CenteredColumn>
   );
 }
